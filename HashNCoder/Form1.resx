@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label28.Text" xml:space="preserve">
-    <value>The program should accept the user's date of birth, automatically calculate and display in real-time information about their age, time until the next birthday, and other time-related events associated with their age.</value>
-  </data>
 </root>
