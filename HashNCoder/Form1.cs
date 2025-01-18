@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using Guna.UI2.WinForms;
 
 
 namespace HashNCoder
@@ -23,10 +24,37 @@ namespace HashNCoder
 
         }
 
-      
-
-        private void E_Btn_Encode_Click(object sender, EventArgs e)
+        private async void E_Btn_Encode_Click(object sender, EventArgs e)
         {
+            bool hasError = false;
+
+            if (string.IsNullOrWhiteSpace(E_Txb_CurrentText.Text))
+            {
+                await HighlightTextBoxAsync(E_Txb_CurrentText);
+                hasError = true;
+            }
+            if (hasError)
+            {
+                MessageBox.Show("Please fill in the required fields.", "Warning");
+                return;
+            }
+
+            if (E_Combo_EnCodeDe.SelectedIndex == 0 && E_Combo_Algoritm.SelectedIndex == 0)
+            {
+                if (!Coding.IsBase64String(E_Txb_CurrentText.Text))
+                {
+                    await HighlightTextBoxAsync(E_Txb_CurrentText);
+                    MessageBox.Show(
+                               "The string is not a valid Base64 string.\n\n" +
+                               "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
+                               "- Have a length that is a multiple of 4 (including '=' padding characters);",
+                               "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+
+                }
+            }
+
+
             if (E_Combo_Algoritm.SelectedIndex == 0)
             {
                 E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
@@ -75,67 +103,149 @@ namespace HashNCoder
         private bool EBtnCopyIsProcessing = false; 
         private async void E_Btn_Copy_ClickAsync(object sender, EventArgs e)
         {
-            if (EBtnCopyIsProcessing) return;
+            await CopyToClipboardAsync(
+                    E_Btn_Copy,                          
+                    E_Txb_ResultText,                    
+                    Properties.Resources.Copy_icon_30px, 
+                    Properties.Resources.Icon_Check_30px 
+                );
+        }
 
-            if (!string.IsNullOrWhiteSpace(E_Txb_ResultText.Text))
-            { 
+        private void E_Btn_Swap_Click(object sender, EventArgs e)
+        {
+            SwapText(E_Txb_ResultText, E_Txb_CurrentText);
+        }
+
+        private void SwapText(Guna2TextBox textBox1, Guna2TextBox textBox2)
+        {
+            string temp = textBox1.Text;
+            textBox1.Text = textBox2.Text;
+            textBox2.Text = temp;
+        }
+
+        private bool IsCopyProcessing = false;
+
+        private async Task CopyToClipboardAsync(Guna2Button button,
+                                                Guna2TextBox textBox,
+                                                Image originalIcon,
+                                                Image successIcon)
+        {
+            if (IsCopyProcessing) return;
             
-                Clipboard.SetText(E_Txb_ResultText.Text);
-                if (EBtnCopyIsProcessing) return;
-
-                var originalIcon = Properties.Resources.Copy_icon_30px;
-
-                E_Btn_Copy.Image = Properties.Resources.Icon_Check_30px; 
-             
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                IsCopyProcessing = true;
+                Clipboard.SetText(textBox.Text);
+                button.Image = successIcon;
                 await Task.Delay(1000);
-               
-                E_Btn_Copy.Image = originalIcon;
-                EBtnCopyIsProcessing = false;
+                button.Image = originalIcon;
+                IsCopyProcessing = false;
             }
             else
             {
                 MessageBox.Show("The result field is empty. There is nothing to copy.", "Warning!");
             }
-            
-
-        }
-
-        private void E_Btn_Swap_Click(object sender, EventArgs e)
-        {
-            string temp = E_Txb_ResultText.Text;
-            E_Txb_ResultText.Text = E_Txb_CurrentText.Text;
-            E_Txb_CurrentText.Text = temp;
         }
 
 
-       
-
-        private void AES_Btn_Encode_Click(object sender, EventArgs e)
+        private async void AES_Btn_Encode_Click(object sender, EventArgs e)
         {
-            CipherMode cipherMode;
-            if (AES_Combo_Algoritm.SelectedIndex == 0) cipherMode = CipherMode.ECB;
-            else cipherMode = CipherMode.CBC;
+            bool hasError = false;
+          
+            if (string.IsNullOrWhiteSpace(AES_TxtBx_Key.Text))
+            {
+                await HighlightTextBoxAsync(AES_TxtBx_Key);
+                hasError = true;
+            }
 
-            byte[] key = Encoding.UTF8.GetBytes(AES_TxtBx_Key.Text);
+            if (string.IsNullOrWhiteSpace(AES_Txb_CurrentText.Text))
+            {
+                await HighlightTextBoxAsync(AES_Txb_CurrentText);
+                hasError = true;
+            }
+            else if (AES_Combo_EnCodeDe.SelectedIndex == 1) 
+            {
+                if (!Coding.IsBase64String(AES_Txb_CurrentText.Text))
+                {
+                    await HighlightTextBoxAsync(AES_Txb_CurrentText);
+                    MessageBox.Show(
+                               "The string is not a valid Base64 string.\n\n" +
+                               "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
+                               "- Have a length that is a multiple of 4 (including '=' padding characters);",
+                               "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                 
+                }
+            }
 
-            int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
+            if (hasError)
+            {
+                MessageBox.Show("Please fill in the required fields.", "Warning");
+                return;
+            }
+            try
+            {
+                CipherMode cipherMode = AES_Combo_Algoritm.SelectedIndex == 0 ? CipherMode.ECB : CipherMode.CBC;
 
+                int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
 
-            AES_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
-                ? Coding.AES_Encrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize).ToString()
-                : Coding.AES_Decrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize);
-            
-            
+                AES_Txb_ResultText.Text = AES_Combo_EnCodeDe.SelectedIndex == 0
+                    ? Coding.AES_Encrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize)
+                    : Coding.AES_Decrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AES_Btn_GenerateKey_Click(object sender, EventArgs e)
         {
+
             int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
-   
             byte[] key = Coding.AES_GenerateKey(keySize);
-       
             AES_TxtBx_Key.Text = Convert.ToBase64String(key);
 
+
+        }
+
+
+
+        private async Task HighlightTextBoxAsync(Guna2TextBox textBox)
+        {
+
+            var originalFillColor = textBox.FillColor;
+
+            for (int i = 0; i < 1; i++)
+            {
+                textBox.FillColor = Color.Red;
+                await Task.Delay(200);
+
+                textBox.FillColor = originalFillColor; 
+                await Task.Delay(200);
+            }
+
+
+        }
+
+        private void AES_Btn_Paste_Click(object sender, EventArgs e)
+        {
+            AES_Txb_CurrentText.Text = Clipboard.GetText();
+        }
+
+        private void AES_Btn_Swap_Click(object sender, EventArgs e)
+        {
+            SwapText(AES_Txb_ResultText, AES_Txb_CurrentText);
+        }
+
+        private async void AES_Btn_Copy_Click(object sender, EventArgs e)
+        {
+            await CopyToClipboardAsync(
+                   AES_Btn_Copy,                          
+                   AES_Txb_ResultText,                    
+                   Properties.Resources.Copy_icon_30px,
+                   Properties.Resources.Icon_Check_30px 
+               );
         }
     }
 }

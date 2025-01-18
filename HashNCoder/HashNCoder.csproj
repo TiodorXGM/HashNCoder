@@ -103,5 +103,8 @@
   <ItemGroup>
     <None Include="Resources\Icon_Check_30px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_Warning_30px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

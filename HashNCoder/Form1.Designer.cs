@@ -52,6 +52,9 @@
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.AES_Tab = new System.Windows.Forms.TabPage();
+            this.AES_Btn_Swap = new Guna.UI2.WinForms.Guna2Button();
+            this.AES_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
+            this.AES_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
             this.AES_Btn_Encode = new Guna.UI2.WinForms.Guna2Button();
@@ -76,6 +79,7 @@
             this.AES_Combo_EnCodeDe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.Hashing_Tab = new System.Windows.Forms.TabPage();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator11 = new Guna.UI2.WinForms.Guna2Separator();
             this.label15 = new System.Windows.Forms.Label();
@@ -89,8 +93,6 @@
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.AES_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
-            this.AES_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.Encoding_Tab.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -356,6 +358,7 @@
             this.E_Txb_ResultText.Name = "E_Txb_ResultText";
             this.E_Txb_ResultText.PasswordChar = '\0';
             this.E_Txb_ResultText.PlaceholderText = "Result goes here...";
+            this.E_Txb_ResultText.ReadOnly = true;
             this.E_Txb_ResultText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.E_Txb_ResultText.SelectedText = "";
             this.E_Txb_ResultText.Size = new System.Drawing.Size(549, 146);
@@ -448,6 +451,7 @@
             // AES_Tab
             // 
             this.AES_Tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
+            this.AES_Tab.Controls.Add(this.AES_Btn_Swap);
             this.AES_Tab.Controls.Add(this.AES_Btn_Copy);
             this.AES_Tab.Controls.Add(this.AES_Btn_Paste);
             this.AES_Tab.Controls.Add(this.label12);
@@ -479,6 +483,61 @@
             this.AES_Tab.Size = new System.Drawing.Size(633, 613);
             this.AES_Tab.TabIndex = 1;
             this.AES_Tab.Text = "AES";
+            // 
+            // AES_Btn_Swap
+            // 
+            this.AES_Btn_Swap.BorderRadius = 10;
+            this.AES_Btn_Swap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Swap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Swap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Swap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Swap.FillColor = System.Drawing.Color.SlateGray;
+            this.AES_Btn_Swap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Swap.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Swap.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
+            this.AES_Btn_Swap.Location = new System.Drawing.Point(37, 412);
+            this.AES_Btn_Swap.Name = "AES_Btn_Swap";
+            this.AES_Btn_Swap.Size = new System.Drawing.Size(40, 40);
+            this.AES_Btn_Swap.TabIndex = 32;
+            this.AES_Btn_Swap.Click += new System.EventHandler(this.AES_Btn_Swap_Click);
+            // 
+            // AES_Btn_Copy
+            // 
+            this.AES_Btn_Copy.BorderRadius = 5;
+            this.AES_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Copy.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
+            this.AES_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.AES_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
+            this.AES_Btn_Copy.Location = new System.Drawing.Point(406, 469);
+            this.AES_Btn_Copy.Name = "AES_Btn_Copy";
+            this.AES_Btn_Copy.Size = new System.Drawing.Size(180, 22);
+            this.AES_Btn_Copy.TabIndex = 31;
+            this.AES_Btn_Copy.Text = "Copy to Clipboard";
+            this.AES_Btn_Copy.Click += new System.EventHandler(this.AES_Btn_Copy_Click);
+            // 
+            // AES_Btn_Paste
+            // 
+            this.AES_Btn_Paste.BorderRadius = 5;
+            this.AES_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Paste.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
+            this.AES_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.AES_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
+            this.AES_Btn_Paste.Location = new System.Drawing.Point(406, 266);
+            this.AES_Btn_Paste.Name = "AES_Btn_Paste";
+            this.AES_Btn_Paste.Size = new System.Drawing.Size(180, 22);
+            this.AES_Btn_Paste.TabIndex = 30;
+            this.AES_Btn_Paste.Text = "Paste from Clipboard";
+            this.AES_Btn_Paste.Click += new System.EventHandler(this.AES_Btn_Paste_Click);
             // 
             // label12
             // 
@@ -570,6 +629,7 @@
             this.AES_Txb_ResultText.Name = "AES_Txb_ResultText";
             this.AES_Txb_ResultText.PasswordChar = '\0';
             this.AES_Txb_ResultText.PlaceholderText = "Result goes here...";
+            this.AES_Txb_ResultText.ReadOnly = true;
             this.AES_Txb_ResultText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.AES_Txb_ResultText.SelectedText = "";
             this.AES_Txb_ResultText.Size = new System.Drawing.Size(549, 106);
@@ -667,7 +727,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.label9.Location = new System.Drawing.Point(37, 228);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 25);
+            this.label9.Size = new System.Drawing.Size(42, 25);
             this.label9.TabIndex = 16;
             this.label9.Text = "Key";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -720,9 +780,9 @@
             // guna2Separator7
             // 
             this.guna2Separator7.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator7.Location = new System.Drawing.Point(37, 235);
+            this.guna2Separator7.Location = new System.Drawing.Point(68, 235);
             this.guna2Separator7.Name = "guna2Separator7";
-            this.guna2Separator7.Size = new System.Drawing.Size(207, 10);
+            this.guna2Separator7.Size = new System.Drawing.Size(176, 10);
             this.guna2Separator7.TabIndex = 15;
             // 
             // label5
@@ -804,6 +864,7 @@
             // Hashing_Tab
             // 
             this.Hashing_Tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
+            this.Hashing_Tab.Controls.Add(this.guna2Button1);
             this.Hashing_Tab.Controls.Add(this.guna2Button9);
             this.Hashing_Tab.Controls.Add(this.guna2Separator11);
             this.Hashing_Tab.Controls.Add(this.label15);
@@ -822,6 +883,22 @@
             this.Hashing_Tab.Size = new System.Drawing.Size(633, 613);
             this.Hashing_Tab.TabIndex = 2;
             this.Hashing_Tab.Text = "Hashing";
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.SlateGray;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
+            this.guna2Button1.Location = new System.Drawing.Point(41, 333);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(40, 40);
+            this.guna2Button1.TabIndex = 29;
             // 
             // guna2Button9
             // 
@@ -965,6 +1042,7 @@
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PasswordChar = '\0';
             this.guna2TextBox6.PlaceholderText = "Result goes here...";
+            this.guna2TextBox6.ReadOnly = true;
             this.guna2TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.guna2TextBox6.SelectedText = "";
             this.guna2TextBox6.Size = new System.Drawing.Size(549, 146);
@@ -1002,42 +1080,6 @@
             this.imageList1.Images.SetKeyName(0, "Icon_hash_30px.png");
             this.imageList1.Images.SetKeyName(1, "Icon_encoding_30px.png");
             this.imageList1.Images.SetKeyName(2, "Icon_AES_30px.png");
-            // 
-            // AES_Btn_Paste
-            // 
-            this.AES_Btn_Paste.BorderRadius = 5;
-            this.AES_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AES_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AES_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AES_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AES_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AES_Btn_Paste.ForeColor = System.Drawing.Color.White;
-            this.AES_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
-            this.AES_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.AES_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.AES_Btn_Paste.Location = new System.Drawing.Point(406, 266);
-            this.AES_Btn_Paste.Name = "AES_Btn_Paste";
-            this.AES_Btn_Paste.Size = new System.Drawing.Size(180, 22);
-            this.AES_Btn_Paste.TabIndex = 30;
-            this.AES_Btn_Paste.Text = "Paste from Clipboard";
-            // 
-            // AES_Btn_Copy
-            // 
-            this.AES_Btn_Copy.BorderRadius = 5;
-            this.AES_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.AES_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.AES_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.AES_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.AES_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.AES_Btn_Copy.ForeColor = System.Drawing.Color.White;
-            this.AES_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
-            this.AES_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.AES_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.AES_Btn_Copy.Location = new System.Drawing.Point(406, 469);
-            this.AES_Btn_Copy.Name = "AES_Btn_Copy";
-            this.AES_Btn_Copy.Size = new System.Drawing.Size(180, 22);
-            this.AES_Btn_Copy.TabIndex = 31;
-            this.AES_Btn_Copy.Text = "Copy to Clipboard";
             // 
             // Form1
             // 
@@ -1121,6 +1163,8 @@
         private Guna.UI2.WinForms.Guna2Button E_Btn_Swap;
         private Guna.UI2.WinForms.Guna2Button AES_Btn_Copy;
         private Guna.UI2.WinForms.Guna2Button AES_Btn_Paste;
+        private Guna.UI2.WinForms.Guna2Button AES_Btn_Swap;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
 
