@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.Encoding_Tab = new System.Windows.Forms.TabPage();
+            this.E_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
+            this.E_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
+            this.E_Btn_Swap = new Guna.UI2.WinForms.Guna2Button();
             this.E_Btn_Encode = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
@@ -88,9 +91,6 @@
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.E_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
-            this.E_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
-            this.E_Btn_Swap = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.Encoding_Tab.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -162,6 +162,61 @@
             this.Encoding_Tab.Size = new System.Drawing.Size(633, 613);
             this.Encoding_Tab.TabIndex = 0;
             this.Encoding_Tab.Text = "Encoding";
+            // 
+            // E_Btn_Copy
+            // 
+            this.E_Btn_Copy.BorderRadius = 5;
+            this.E_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.E_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.E_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.E_Btn_Copy.ForeColor = System.Drawing.Color.White;
+            this.E_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
+            this.E_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.E_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
+            this.E_Btn_Copy.Location = new System.Drawing.Point(406, 414);
+            this.E_Btn_Copy.Name = "E_Btn_Copy";
+            this.E_Btn_Copy.Size = new System.Drawing.Size(180, 22);
+            this.E_Btn_Copy.TabIndex = 17;
+            this.E_Btn_Copy.Text = "Copy to Clipboard";
+            this.E_Btn_Copy.Click += new System.EventHandler(this.E_Btn_Copy_ClickAsync);
+            // 
+            // E_Btn_Paste
+            // 
+            this.E_Btn_Paste.BorderRadius = 5;
+            this.E_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.E_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.E_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.E_Btn_Paste.ForeColor = System.Drawing.Color.White;
+            this.E_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
+            this.E_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.E_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
+            this.E_Btn_Paste.Location = new System.Drawing.Point(406, 196);
+            this.E_Btn_Paste.Name = "E_Btn_Paste";
+            this.E_Btn_Paste.Size = new System.Drawing.Size(180, 22);
+            this.E_Btn_Paste.TabIndex = 17;
+            this.E_Btn_Paste.Text = "Paste from Clipboard";
+            this.E_Btn_Paste.Click += new System.EventHandler(this.E_Btn_Paste_Click);
+            // 
+            // E_Btn_Swap
+            // 
+            this.E_Btn_Swap.BorderRadius = 10;
+            this.E_Btn_Swap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Swap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.E_Btn_Swap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.E_Btn_Swap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.E_Btn_Swap.FillColor = System.Drawing.Color.SlateGray;
+            this.E_Btn_Swap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.E_Btn_Swap.ForeColor = System.Drawing.Color.White;
+            this.E_Btn_Swap.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
+            this.E_Btn_Swap.Location = new System.Drawing.Point(37, 348);
+            this.E_Btn_Swap.Name = "E_Btn_Swap";
+            this.E_Btn_Swap.Size = new System.Drawing.Size(40, 40);
+            this.E_Btn_Swap.TabIndex = 16;
+            this.E_Btn_Swap.Click += new System.EventHandler(this.E_Btn_Swap_Click);
             // 
             // E_Btn_Encode
             // 
@@ -973,61 +1028,6 @@
             this.imageList1.Images.SetKeyName(0, "Icon_hash_30px.png");
             this.imageList1.Images.SetKeyName(1, "Icon_encoding_30px.png");
             this.imageList1.Images.SetKeyName(2, "Icon_AES_30px.png");
-            // 
-            // E_Btn_Copy
-            // 
-            this.E_Btn_Copy.BorderRadius = 5;
-            this.E_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.E_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.E_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.E_Btn_Copy.ForeColor = System.Drawing.Color.White;
-            this.E_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
-            this.E_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.E_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.E_Btn_Copy.Location = new System.Drawing.Point(406, 414);
-            this.E_Btn_Copy.Name = "E_Btn_Copy";
-            this.E_Btn_Copy.Size = new System.Drawing.Size(180, 22);
-            this.E_Btn_Copy.TabIndex = 17;
-            this.E_Btn_Copy.Text = "Copy to Clipboard";
-            this.E_Btn_Copy.Click += new System.EventHandler(this.E_Btn_Copy_Click);
-            // 
-            // E_Btn_Paste
-            // 
-            this.E_Btn_Paste.BorderRadius = 5;
-            this.E_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.E_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.E_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.E_Btn_Paste.ForeColor = System.Drawing.Color.White;
-            this.E_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
-            this.E_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.E_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.E_Btn_Paste.Location = new System.Drawing.Point(406, 196);
-            this.E_Btn_Paste.Name = "E_Btn_Paste";
-            this.E_Btn_Paste.Size = new System.Drawing.Size(180, 22);
-            this.E_Btn_Paste.TabIndex = 17;
-            this.E_Btn_Paste.Text = "Paste from Clipboard";
-            this.E_Btn_Paste.Click += new System.EventHandler(this.E_Btn_Paste_Click);
-            // 
-            // E_Btn_Swap
-            // 
-            this.E_Btn_Swap.BorderRadius = 10;
-            this.E_Btn_Swap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Swap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.E_Btn_Swap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.E_Btn_Swap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.E_Btn_Swap.FillColor = System.Drawing.Color.SlateGray;
-            this.E_Btn_Swap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.E_Btn_Swap.ForeColor = System.Drawing.Color.White;
-            this.E_Btn_Swap.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
-            this.E_Btn_Swap.Location = new System.Drawing.Point(37, 348);
-            this.E_Btn_Swap.Name = "E_Btn_Swap";
-            this.E_Btn_Swap.Size = new System.Drawing.Size(40, 40);
-            this.E_Btn_Swap.TabIndex = 16;
-            this.E_Btn_Swap.Click += new System.EventHandler(this.E_Btn_Swap_Click);
             // 
             // Form1
             // 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace HashNCoder
         public Form1()
         {
             InitializeComponent();
+           
 
         }
 
@@ -69,13 +71,32 @@ namespace HashNCoder
            
         }
 
-        private void E_Btn_Copy_Click(object sender, EventArgs e)
+        private bool EBtnCopyIsProcessing = false; 
+        private async void E_Btn_Copy_ClickAsync(object sender, EventArgs e)
         {
+            if (EBtnCopyIsProcessing) return;
+
             if (!string.IsNullOrWhiteSpace(E_Txb_ResultText.Text))
-            {
+            { 
+            
                 Clipboard.SetText(E_Txb_ResultText.Text);
+                if (EBtnCopyIsProcessing) return;
+
+                var originalIcon = Properties.Resources.Copy_icon_30px;
+
+                E_Btn_Copy.Image = Properties.Resources.Icon_Check_30px; 
+             
+                await Task.Delay(1000);
+               
+                E_Btn_Copy.Image = originalIcon;
+                EBtnCopyIsProcessing = false;
             }
-          
+            else
+            {
+                MessageBox.Show("The result field is empty. There is nothing to copy.", "Warning!");
+            }
+            
+
         }
 
         private void E_Btn_Swap_Click(object sender, EventArgs e)

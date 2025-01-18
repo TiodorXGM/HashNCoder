@@ -27,16 +27,17 @@ namespace HashNCoder
             }
             catch (FormatException)
             {
-                MessageBox.Show("The string is not a valid Base64 string. A valid Base64 string should:" +
-                                 "\n- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';" +
-                                 "\n- Have a length that is a multiple of 4 (including '=' padding characters);", "Warning!");
+                MessageBox.Show(
+                                "The string is not a valid Base64 string.\n\n" +
+                                "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
+                                "- Have a length that is a multiple of 4 (including '=' padding characters);",
+                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return null;
             }
         }
 
         public static string URLEncode(string input)
         {
-
             string encoded = WebUtility.UrlEncode(input);
             return encoded;         
         }
@@ -52,7 +53,6 @@ namespace HashNCoder
             string encoded = WebUtility.HtmlEncode(input);
             return encoded;
         }
-
 
         public static string HTMLDecode(string input)
         {
