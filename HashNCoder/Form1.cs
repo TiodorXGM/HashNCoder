@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 
 namespace HashNCoder
@@ -104,6 +105,37 @@ namespace HashNCoder
             string temp = E_Txb_ResultText.Text;
             E_Txb_ResultText.Text = E_Txb_CurrentText.Text;
             E_Txb_CurrentText.Text = temp;
+        }
+
+
+       
+
+        private void AES_Btn_Encode_Click(object sender, EventArgs e)
+        {
+            CipherMode cipherMode;
+            if (AES_Combo_Algoritm.SelectedIndex == 0) cipherMode = CipherMode.ECB;
+            else cipherMode = CipherMode.CBC;
+
+            byte[] key = Encoding.UTF8.GetBytes(AES_TxtBx_Key.Text);
+
+            int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
+
+
+            AES_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                ? Coding.AES_Encrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize).ToString()
+                : Coding.AES_Decrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize);
+            
+            
+        }
+
+        private void AES_Btn_GenerateKey_Click(object sender, EventArgs e)
+        {
+            int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
+   
+            byte[] key = Coding.AES_GenerateKey(keySize);
+       
+            AES_TxtBx_Key.Text = Convert.ToBase64String(key);
+
         }
     }
 }

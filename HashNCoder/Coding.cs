@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using System.Security.Cryptography;
 
 namespace HashNCoder
 {
@@ -71,5 +72,103 @@ namespace HashNCoder
             string decoded = Uri.UnescapeDataString(input);
             return decoded;
         }
+
+        public static string AES_Encrypt(string plainText, string keyText, CipherMode mode, int keySize)
+        {            
+            byte[] key = AES_GenerateKeyFromText(keyText, keySize);
+
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = key;
+                aes.Mode = mode;
+                aes.Padding = PaddingMode.PKCS7;
+
+                byte[] iv = null;
+
+                if (mode != CipherMode.ECB)
+                {
+                    aes.GenerateIV();
+                    iv = aes.IV;
+                }
+
+                using (ICryptoTransform encryptor = aes.CreateEncryptor())
+                {
+                    byte[] plainBytes = Encoding.UTF8.GetBytes(plainText);
+                    byte[] encryptedBytes = encryptor.TransformFinalBlock(plainBytes, 0, plainBytes.Length);
+
+                    if (mode == CipherMode.ECB)
+                    {
+                        return Encoding.UTF8.GetString(encryptedBytes);
+                    }
+
+                    byte[] result = new byte[iv.Length + encryptedBytes.Length];
+                    Array.Copy(iv, 0, result, 0, iv.Length);
+                    Array.Copy(encryptedBytes, 0, result, iv.Length, encryptedBytes.Length);
+                    return Encoding.UTF8.GetString(result); 
+                }
+            }
+        }
+
+        public static string AES_Decrypt(string cipherText, string keyText, CipherMode mode, int keySize)
+        {
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+            byte[] key = AES_GenerateKeyFromText(keyText, keySize);
+
+            using (Aes aes = Aes.Create())
+            {
+                aes.Key = key;
+                aes.Mode = mode;
+                aes.Padding = PaddingMode.PKCS7;
+
+                byte[] iv = null;
+                byte[] encryptedBytes;
+
+                if (mode != CipherMode.ECB)
+                {
+                    iv = new byte[16]; 
+                    Array.Copy(cipherBytes, 0, iv, 0, iv.Length);
+                    aes.IV = iv;
+
+                    encryptedBytes = new byte[cipherBytes.Length - iv.Length];
+                    Array.Copy(cipherBytes, iv.Length, encryptedBytes, 0, encryptedBytes.Length);
+                }
+                else
+                {
+                    encryptedBytes = cipherBytes;
+                }
+
+                using (ICryptoTransform decryptor = aes.CreateDecryptor())
+                {
+                    byte[] plainBytes = decryptor.TransformFinalBlock(encryptedBytes, 0, encryptedBytes.Length);
+                    return Encoding.UTF8.GetString(plainBytes);
+                }
+            }
+        }
+
+        private static byte[] AES_GenerateKeyFromText(string keyText, int keySize)
+        {
+            byte[] keyBytes = Encoding.UTF8.GetBytes(keyText);
+
+            byte[] key = new byte[keySize / 8];
+            for (int i = 0; i < key.Length; i++)
+            {
+                key[i] = keyBytes[i % keyBytes.Length];
+            }
+
+            return key;
+        }
+
+
+        public static byte[] AES_GenerateKey(int keySize)
+        {
+            using (Aes aes = Aes.Create())
+            {
+                aes.KeySize = keySize;
+                aes.GenerateKey();
+                return aes.Key;
+            }
+        }
+
+
     }
 }

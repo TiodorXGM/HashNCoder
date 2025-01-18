@@ -54,28 +54,26 @@
             this.AES_Tab = new System.Windows.Forms.TabPage();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.AES_Btn_Encode = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AES_Txb_ResultText = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AES_Txb_CurrentText = new Guna.UI2.WinForms.Guna2TextBox();
+            this.AES_Btn_GenerateKey = new Guna.UI2.WinForms.Guna2Button();
+            this.AES_TxtBx_Key = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2ComboBox5 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.AES_Combo_KeySize = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator7 = new Guna.UI2.WinForms.Guna2Separator();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.AES_Combo_Algoritm = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.AES_Combo_EnCodeDe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.Hashing_Tab = new System.Windows.Forms.TabPage();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
@@ -91,6 +89,8 @@
             this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.AES_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
+            this.AES_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.Encoding_Tab.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -448,29 +448,29 @@
             // AES_Tab
             // 
             this.AES_Tab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
+            this.AES_Tab.Controls.Add(this.AES_Btn_Copy);
+            this.AES_Tab.Controls.Add(this.AES_Btn_Paste);
             this.AES_Tab.Controls.Add(this.label12);
             this.AES_Tab.Controls.Add(this.guna2Separator9);
-            this.AES_Tab.Controls.Add(this.guna2Button6);
+            this.AES_Tab.Controls.Add(this.AES_Btn_Encode);
             this.AES_Tab.Controls.Add(this.guna2Separator8);
-            this.AES_Tab.Controls.Add(this.guna2Button4);
-            this.AES_Tab.Controls.Add(this.guna2Button5);
             this.AES_Tab.Controls.Add(this.label10);
             this.AES_Tab.Controls.Add(this.label11);
-            this.AES_Tab.Controls.Add(this.guna2TextBox4);
-            this.AES_Tab.Controls.Add(this.guna2TextBox5);
-            this.AES_Tab.Controls.Add(this.guna2Button3);
-            this.AES_Tab.Controls.Add(this.guna2TextBox3);
+            this.AES_Tab.Controls.Add(this.AES_Txb_ResultText);
+            this.AES_Tab.Controls.Add(this.AES_Txb_CurrentText);
+            this.AES_Tab.Controls.Add(this.AES_Btn_GenerateKey);
+            this.AES_Tab.Controls.Add(this.AES_TxtBx_Key);
             this.AES_Tab.Controls.Add(this.guna2Panel2);
             this.AES_Tab.Controls.Add(this.label9);
             this.AES_Tab.Controls.Add(this.label8);
             this.AES_Tab.Controls.Add(this.label7);
-            this.AES_Tab.Controls.Add(this.guna2ComboBox5);
+            this.AES_Tab.Controls.Add(this.AES_Combo_KeySize);
             this.AES_Tab.Controls.Add(this.guna2Separator7);
             this.AES_Tab.Controls.Add(this.label5);
             this.AES_Tab.Controls.Add(this.guna2Separator6);
-            this.AES_Tab.Controls.Add(this.guna2ComboBox4);
+            this.AES_Tab.Controls.Add(this.AES_Combo_Algoritm);
             this.AES_Tab.Controls.Add(this.guna2Separator5);
-            this.AES_Tab.Controls.Add(this.guna2ComboBox3);
+            this.AES_Tab.Controls.Add(this.AES_Combo_EnCodeDe);
             this.AES_Tab.Controls.Add(this.guna2Separator4);
             this.AES_Tab.ImageKey = "Icon_AES_30px.png";
             this.AES_Tab.Location = new System.Drawing.Point(4, 44);
@@ -501,21 +501,22 @@
             this.guna2Separator9.Size = new System.Drawing.Size(545, 10);
             this.guna2Separator9.TabIndex = 28;
             // 
-            // guna2Button6
+            // AES_Btn_Encode
             // 
-            this.guna2Button6.BorderRadius = 15;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.Location = new System.Drawing.Point(200, 405);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(220, 54);
-            this.guna2Button6.TabIndex = 27;
-            this.guna2Button6.Text = "Encode";
+            this.AES_Btn_Encode.BorderRadius = 15;
+            this.AES_Btn_Encode.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Encode.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Encode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Encode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Encode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
+            this.AES_Btn_Encode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Encode.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Encode.Location = new System.Drawing.Point(200, 405);
+            this.AES_Btn_Encode.Name = "AES_Btn_Encode";
+            this.AES_Btn_Encode.Size = new System.Drawing.Size(220, 54);
+            this.AES_Btn_Encode.TabIndex = 27;
+            this.AES_Btn_Encode.Text = "Encode";
+            this.AES_Btn_Encode.Click += new System.EventHandler(this.AES_Btn_Encode_Click);
             // 
             // guna2Separator8
             // 
@@ -524,36 +525,6 @@
             this.guna2Separator8.Name = "guna2Separator8";
             this.guna2Separator8.Size = new System.Drawing.Size(549, 10);
             this.guna2Separator8.TabIndex = 26;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.BorderRadius = 5;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(406, 469);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(180, 22);
-            this.guna2Button4.TabIndex = 24;
-            this.guna2Button4.Text = "Copy to Clipboard";
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.BorderRadius = 5;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(406, 266);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(180, 22);
-            this.guna2Button5.TabIndex = 25;
-            this.guna2Button5.Text = "Paste from Clipboard";
             // 
             // label10
             // 
@@ -579,91 +550,92 @@
             this.label11.Text = "Write your text here:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2TextBox4
+            // AES_Txb_ResultText
             // 
-            this.guna2TextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox4.BorderRadius = 10;
-            this.guna2TextBox4.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2TextBox4.BorderThickness = 0;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(37, 492);
-            this.guna2TextBox4.Multiline = true;
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "Result goes here...";
-            this.guna2TextBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(549, 106);
-            this.guna2TextBox4.TabIndex = 20;
+            this.AES_Txb_ResultText.BackColor = System.Drawing.Color.Transparent;
+            this.AES_Txb_ResultText.BorderRadius = 10;
+            this.AES_Txb_ResultText.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.AES_Txb_ResultText.BorderThickness = 0;
+            this.AES_Txb_ResultText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AES_Txb_ResultText.DefaultText = "";
+            this.AES_Txb_ResultText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.AES_Txb_ResultText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.AES_Txb_ResultText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_Txb_ResultText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_Txb_ResultText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Txb_ResultText.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Txb_ResultText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Txb_ResultText.Location = new System.Drawing.Point(37, 492);
+            this.AES_Txb_ResultText.Multiline = true;
+            this.AES_Txb_ResultText.Name = "AES_Txb_ResultText";
+            this.AES_Txb_ResultText.PasswordChar = '\0';
+            this.AES_Txb_ResultText.PlaceholderText = "Result goes here...";
+            this.AES_Txb_ResultText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.AES_Txb_ResultText.SelectedText = "";
+            this.AES_Txb_ResultText.Size = new System.Drawing.Size(549, 106);
+            this.AES_Txb_ResultText.TabIndex = 20;
             // 
-            // guna2TextBox5
+            // AES_Txb_CurrentText
             // 
-            this.guna2TextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox5.BorderRadius = 10;
-            this.guna2TextBox5.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2TextBox5.BorderThickness = 0;
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(37, 289);
-            this.guna2TextBox5.Multiline = true;
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "Type (or paste) here...";
-            this.guna2TextBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(549, 106);
-            this.guna2TextBox5.TabIndex = 21;
+            this.AES_Txb_CurrentText.BackColor = System.Drawing.Color.Transparent;
+            this.AES_Txb_CurrentText.BorderRadius = 10;
+            this.AES_Txb_CurrentText.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.AES_Txb_CurrentText.BorderThickness = 0;
+            this.AES_Txb_CurrentText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AES_Txb_CurrentText.DefaultText = "";
+            this.AES_Txb_CurrentText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.AES_Txb_CurrentText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.AES_Txb_CurrentText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_Txb_CurrentText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_Txb_CurrentText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Txb_CurrentText.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Txb_CurrentText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Txb_CurrentText.Location = new System.Drawing.Point(37, 289);
+            this.AES_Txb_CurrentText.Multiline = true;
+            this.AES_Txb_CurrentText.Name = "AES_Txb_CurrentText";
+            this.AES_Txb_CurrentText.PasswordChar = '\0';
+            this.AES_Txb_CurrentText.PlaceholderText = "Type (or paste) here...";
+            this.AES_Txb_CurrentText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.AES_Txb_CurrentText.SelectedText = "";
+            this.AES_Txb_CurrentText.Size = new System.Drawing.Size(549, 106);
+            this.AES_Txb_CurrentText.TabIndex = 21;
             // 
-            // guna2Button3
+            // AES_Btn_GenerateKey
             // 
-            this.guna2Button3.BorderRadius = 15;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(209, 224);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(112, 35);
-            this.guna2Button3.TabIndex = 19;
-            this.guna2Button3.Text = "Generate key";
+            this.AES_Btn_GenerateKey.BorderRadius = 15;
+            this.AES_Btn_GenerateKey.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_GenerateKey.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_GenerateKey.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_GenerateKey.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_GenerateKey.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
+            this.AES_Btn_GenerateKey.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_GenerateKey.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_GenerateKey.Location = new System.Drawing.Point(132, 224);
+            this.AES_Btn_GenerateKey.Name = "AES_Btn_GenerateKey";
+            this.AES_Btn_GenerateKey.Size = new System.Drawing.Size(112, 35);
+            this.AES_Btn_GenerateKey.TabIndex = 19;
+            this.AES_Btn_GenerateKey.Text = "Generate key";
+            this.AES_Btn_GenerateKey.Click += new System.EventHandler(this.AES_Btn_GenerateKey_Click);
             // 
-            // guna2TextBox3
+            // AES_TxtBx_Key
             // 
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(327, 224);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(259, 36);
-            this.guna2TextBox3.TabIndex = 18;
+            this.AES_TxtBx_Key.BorderRadius = 15;
+            this.AES_TxtBx_Key.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.AES_TxtBx_Key.DefaultText = "";
+            this.AES_TxtBx_Key.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.AES_TxtBx_Key.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.AES_TxtBx_Key.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_TxtBx_Key.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.AES_TxtBx_Key.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_TxtBx_Key.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_TxtBx_Key.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_TxtBx_Key.Location = new System.Drawing.Point(250, 224);
+            this.AES_TxtBx_Key.Name = "AES_TxtBx_Key";
+            this.AES_TxtBx_Key.PasswordChar = '\0';
+            this.AES_TxtBx_Key.PlaceholderText = "Type key here...";
+            this.AES_TxtBx_Key.SelectedText = "";
+            this.AES_TxtBx_Key.Size = new System.Drawing.Size(336, 36);
+            this.AES_TxtBx_Key.TabIndex = 18;
             // 
             // guna2Panel2
             // 
@@ -724,24 +696,26 @@
             this.label7.Text = "select algorithm";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2ComboBox5
+            // AES_Combo_KeySize
             // 
-            this.guna2ComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox5.BorderRadius = 10;
-            this.guna2ComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox5.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox5.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox5.ItemHeight = 30;
-            this.guna2ComboBox5.Items.AddRange(new object[] {
-            "128"});
-            this.guna2ComboBox5.Location = new System.Drawing.Point(446, 182);
-            this.guna2ComboBox5.Name = "guna2ComboBox5";
-            this.guna2ComboBox5.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox5.StartIndex = 0;
-            this.guna2ComboBox5.TabIndex = 14;
+            this.AES_Combo_KeySize.BackColor = System.Drawing.Color.Transparent;
+            this.AES_Combo_KeySize.BorderRadius = 10;
+            this.AES_Combo_KeySize.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AES_Combo_KeySize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AES_Combo_KeySize.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_KeySize.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_KeySize.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.AES_Combo_KeySize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.AES_Combo_KeySize.ItemHeight = 30;
+            this.AES_Combo_KeySize.Items.AddRange(new object[] {
+            "128",
+            "192",
+            "256"});
+            this.AES_Combo_KeySize.Location = new System.Drawing.Point(446, 182);
+            this.AES_Combo_KeySize.Name = "AES_Combo_KeySize";
+            this.AES_Combo_KeySize.Size = new System.Drawing.Size(140, 36);
+            this.AES_Combo_KeySize.StartIndex = 0;
+            this.AES_Combo_KeySize.TabIndex = 14;
             // 
             // guna2Separator7
             // 
@@ -771,25 +745,25 @@
             this.guna2Separator6.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator6.TabIndex = 15;
             // 
-            // guna2ComboBox4
+            // AES_Combo_Algoritm
             // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.BorderRadius = 10;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Items.AddRange(new object[] {
+            this.AES_Combo_Algoritm.BackColor = System.Drawing.Color.Transparent;
+            this.AES_Combo_Algoritm.BorderRadius = 10;
+            this.AES_Combo_Algoritm.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AES_Combo_Algoritm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AES_Combo_Algoritm.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_Algoritm.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_Algoritm.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.AES_Combo_Algoritm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.AES_Combo_Algoritm.ItemHeight = 30;
+            this.AES_Combo_Algoritm.Items.AddRange(new object[] {
             "AES-ECB",
             "AES-CBC"});
-            this.guna2ComboBox4.Location = new System.Drawing.Point(446, 139);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox4.StartIndex = 0;
-            this.guna2ComboBox4.TabIndex = 14;
+            this.AES_Combo_Algoritm.Location = new System.Drawing.Point(446, 139);
+            this.AES_Combo_Algoritm.Name = "AES_Combo_Algoritm";
+            this.AES_Combo_Algoritm.Size = new System.Drawing.Size(140, 36);
+            this.AES_Combo_Algoritm.StartIndex = 0;
+            this.AES_Combo_Algoritm.TabIndex = 14;
             // 
             // guna2Separator5
             // 
@@ -799,25 +773,25 @@
             this.guna2Separator5.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator5.TabIndex = 15;
             // 
-            // guna2ComboBox3
+            // AES_Combo_EnCodeDe
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.BorderRadius = 10;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
+            this.AES_Combo_EnCodeDe.BackColor = System.Drawing.Color.Transparent;
+            this.AES_Combo_EnCodeDe.BorderRadius = 10;
+            this.AES_Combo_EnCodeDe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AES_Combo_EnCodeDe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AES_Combo_EnCodeDe.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_EnCodeDe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AES_Combo_EnCodeDe.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.AES_Combo_EnCodeDe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.AES_Combo_EnCodeDe.ItemHeight = 30;
+            this.AES_Combo_EnCodeDe.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(446, 97);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(140, 36);
-            this.guna2ComboBox3.StartIndex = 0;
-            this.guna2ComboBox3.TabIndex = 14;
+            this.AES_Combo_EnCodeDe.Location = new System.Drawing.Point(446, 97);
+            this.AES_Combo_EnCodeDe.Name = "AES_Combo_EnCodeDe";
+            this.AES_Combo_EnCodeDe.Size = new System.Drawing.Size(140, 36);
+            this.AES_Combo_EnCodeDe.StartIndex = 0;
+            this.AES_Combo_EnCodeDe.TabIndex = 14;
             // 
             // guna2Separator4
             // 
@@ -914,7 +888,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(633, 52);
             this.label16.TabIndex = 2;
-            this.label16.Text = "Encoding";
+            this.label16.Text = "Hashing";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Button7
@@ -1029,6 +1003,42 @@
             this.imageList1.Images.SetKeyName(1, "Icon_encoding_30px.png");
             this.imageList1.Images.SetKeyName(2, "Icon_AES_30px.png");
             // 
+            // AES_Btn_Paste
+            // 
+            this.AES_Btn_Paste.BorderRadius = 5;
+            this.AES_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Paste.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
+            this.AES_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.AES_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
+            this.AES_Btn_Paste.Location = new System.Drawing.Point(406, 266);
+            this.AES_Btn_Paste.Name = "AES_Btn_Paste";
+            this.AES_Btn_Paste.Size = new System.Drawing.Size(180, 22);
+            this.AES_Btn_Paste.TabIndex = 30;
+            this.AES_Btn_Paste.Text = "Paste from Clipboard";
+            // 
+            // AES_Btn_Copy
+            // 
+            this.AES_Btn_Copy.BorderRadius = 5;
+            this.AES_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AES_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AES_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AES_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.AES_Btn_Copy.ForeColor = System.Drawing.Color.White;
+            this.AES_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
+            this.AES_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.AES_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
+            this.AES_Btn_Copy.Location = new System.Drawing.Point(406, 469);
+            this.AES_Btn_Copy.Name = "AES_Btn_Copy";
+            this.AES_Btn_Copy.Size = new System.Drawing.Size(180, 22);
+            this.AES_Btn_Copy.TabIndex = 31;
+            this.AES_Btn_Copy.Text = "Copy to Clipboard";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1076,23 +1086,21 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox5;
+        private Guna.UI2.WinForms.Guna2ComboBox AES_Combo_KeySize;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox AES_Combo_Algoritm;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox AES_Combo_EnCodeDe;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button AES_Btn_Encode;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox AES_Txb_ResultText;
+        private Guna.UI2.WinForms.Guna2TextBox AES_Txb_CurrentText;
+        private Guna.UI2.WinForms.Guna2Button AES_Btn_GenerateKey;
+        private Guna.UI2.WinForms.Guna2TextBox AES_TxtBx_Key;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator7;
         private System.Windows.Forms.Label label12;
@@ -1111,6 +1119,8 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator11;
         private System.Windows.Forms.ImageList imageList1;
         private Guna.UI2.WinForms.Guna2Button E_Btn_Swap;
+        private Guna.UI2.WinForms.Guna2Button AES_Btn_Copy;
+        private Guna.UI2.WinForms.Guna2Button AES_Btn_Paste;
     }
 }
 
