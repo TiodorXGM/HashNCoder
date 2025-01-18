@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Drawing.Imaging;
 
 namespace HashNCoder
 {
@@ -23,35 +25,65 @@ namespace HashNCoder
 
         public static string URLEncode(string input)
         {
-            StringBuilder encoded = new StringBuilder();
 
-            foreach (char c in input)
-            {
-                if (IsSafe(c))
-                {
-                    encoded.Append(c); 
-                }
-                else if (c == ' ')
-                {
-                    encoded.Append("%20"); 
-                }
-                else
-                {
-                    encoded.AppendFormat("%{0:X2}", (int)c); 
-                }
-            }
+            string encoded = WebUtility.UrlEncode(input);
+            return encoded;
+            //StringBuilder encoded = new StringBuilder();
 
-            return encoded.ToString();
+            //foreach (char c in input)
+            //{
+            //    if (IsSafe(c))
+            //    {
+            //        encoded.Append(c); 
+            //    }
+            //    else if (c == ' ')
+            //    {
+            //        encoded.Append("%20"); 
+            //    }
+            //    else
+            //    {
+            //        encoded.AppendFormat("%{0:X2}", (int)c); 
+            //    }
+            //}
+
+            //return encoded.ToString();
         }
 
         public static string URLDecode(string input)
         {
-            return Uri.UnescapeDataString(input);
+            string decoded = WebUtility.UrlDecode(input);
+            return decoded;
+            //return Uri.UnescapeDataString(input);
         }
 
-        private static bool IsSafe(char c)
+        //private static bool IsSafe(char c)
+        //{            
+        //    return char.IsLetterOrDigit(c) || c == '-' || c == '_' || c == '.' || c == '~';
+        //}
+
+        public static string HTMLEncode(string input)
         {            
-            return char.IsLetterOrDigit(c) || c == '-' || c == '_' || c == '.' || c == '~';
+            string encoded = WebUtility.HtmlEncode(input);
+            return encoded;
+        }
+
+
+        public static string HTMLDecode(string input)
+        {
+            string decode = WebUtility.HtmlDecode(input);
+            return decode;
+        }
+
+        public static string UnescapeEncode(string input)
+        {
+            string encoded = Uri.EscapeDataString(input);
+            return encoded;
+        }
+
+        public static string UnescapeDecode(string input)
+        {
+            string decoded = Uri.UnescapeDataString(input);
+            return decoded;
         }
     }
 }

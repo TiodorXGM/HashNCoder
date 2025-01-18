@@ -178,6 +178,7 @@
             this.E_Btn_Copy.Size = new System.Drawing.Size(180, 22);
             this.E_Btn_Copy.TabIndex = 17;
             this.E_Btn_Copy.Text = "Copy to Clipboard";
+            this.E_Btn_Copy.Click += new System.EventHandler(this.E_Btn_Copy_Click);
             // 
             // E_Btn_Paste
             // 
@@ -196,6 +197,7 @@
             this.E_Btn_Paste.Size = new System.Drawing.Size(180, 22);
             this.E_Btn_Paste.TabIndex = 17;
             this.E_Btn_Paste.Text = "Paste from Clipboard";
+            this.E_Btn_Paste.Click += new System.EventHandler(this.E_Btn_Paste_Click);
             // 
             // E_Btn_Encode
             // 
@@ -385,7 +387,6 @@
             this.E_Combo_EnCodeDe.StartIndex = 0;
             this.E_Combo_EnCodeDe.TabIndex = 0;
             this.E_Combo_EnCodeDe.SelectedIndexChanged += new System.EventHandler(this.E_Combo_EnCodeDe_SelectedIndexChanged);
-           
             // 
             // E_Combo_Algoritm
             // 
