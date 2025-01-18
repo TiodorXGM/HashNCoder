@@ -39,7 +39,7 @@ namespace HashNCoder
                 return;
             }
 
-            if (E_Combo_EnCodeDe.SelectedIndex == 0 && E_Combo_Algoritm.SelectedIndex == 0)
+            if (E_Combo_EnCodeDe.SelectedIndex == 1 && E_Combo_Algoritm.SelectedIndex == 0)
             {
                 if (!Coding.IsBase64String(E_Txb_CurrentText.Text))
                 {
@@ -246,6 +246,16 @@ namespace HashNCoder
                    Properties.Resources.Copy_icon_30px,
                    Properties.Resources.Icon_Check_30px 
                );
+        }
+
+        private void AES_Combo_EnCodeDe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (AES_Combo_EnCodeDe.SelectedIndex == 0)
+            {
+                AES_Btn_Encode.Text = "Encode";
+
+            }
+            else AES_Btn_Encode.Text = "Decode";
         }
     }
 }

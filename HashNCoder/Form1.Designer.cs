@@ -852,6 +852,7 @@
             this.AES_Combo_EnCodeDe.Size = new System.Drawing.Size(140, 36);
             this.AES_Combo_EnCodeDe.StartIndex = 0;
             this.AES_Combo_EnCodeDe.TabIndex = 14;
+            this.AES_Combo_EnCodeDe.SelectedIndexChanged += new System.EventHandler(this.AES_Combo_EnCodeDe_SelectedIndexChanged);
             // 
             // guna2Separator4
             // 
