@@ -269,7 +269,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(548, 20);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Your result:";
+            this.label4.Text = "Output:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -281,7 +281,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(548, 20);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Write your text here:";
+            this.label3.Text = "Input:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label28
@@ -593,7 +593,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(548, 20);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Your result:";
+            this.label10.Text = "Output:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
@@ -605,7 +605,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(548, 20);
             this.label11.TabIndex = 23;
-            this.label11.Text = "Write your text here:";
+            this.label11.Text = "Input:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AES_Txb_ResultText
@@ -961,7 +961,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(548, 20);
             this.label13.TabIndex = 20;
-            this.label13.Text = "Your result:";
+            this.label13.Text = "Output:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
@@ -973,7 +973,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(548, 20);
             this.label14.TabIndex = 21;
-            this.label14.Text = "Write your text here:";
+            this.label14.Text = "Input:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // H_Txb_ResultText
@@ -1080,9 +1080,10 @@
             this.ClientSize = new System.Drawing.Size(633, 661);
             this.Controls.Add(this.H_Btn_Encode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hash\'n\'Coder";
             this.H_Btn_Encode.ResumeLayout(false);
             this.Encoding_Tab.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

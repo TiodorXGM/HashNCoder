@@ -20,23 +20,17 @@ namespace HashNCoder
     {
         public Form1()
         {
-            InitializeComponent();
-           
-
+            InitializeComponent();       
         }
+
+        private Color defaultTextColor = Color.FromArgb(125, 137, 149);
 
         private async void E_Btn_Encode_Click(object sender, EventArgs e)
         {
-            bool hasError = false;
-
             if (string.IsNullOrWhiteSpace(E_Txb_CurrentText.Text))
             {
                 await HighlightTextBoxAsync(E_Txb_CurrentText);
-                hasError = true;
-            }
-            if (hasError)
-            {
-                MessageBox.Show("Please fill in the required fields.", "Warning");
+                DisplayErrorInResult(E_Txb_ResultText, "Please fill in the required fields.");
                 return;
             }
 
@@ -45,43 +39,42 @@ namespace HashNCoder
                 if (!Coding.IsBase64String(E_Txb_CurrentText.Text))
                 {
                     await HighlightTextBoxAsync(E_Txb_CurrentText);
-                    MessageBox.Show(
-                               "The string is not a valid Base64 string.\n\n" +
-                               "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
-                               "- Have a length that is a multiple of 4 (including '=' padding characters);",
-                               "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DisplayErrorInResult(E_Txb_ResultText,
+                        "The string is not a valid Base64 string.\n\n" +
+                        "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
+                        "- Have a length that is a multiple of 4 (including '=' padding characters);");
                     return;
-
                 }
             }
 
+            string result = string.Empty;
 
             if (E_Combo_Algoritm.SelectedIndex == 0)
             {
-                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                result = E_Combo_EnCodeDe.SelectedIndex == 0
                     ? Coding.EncodeBase64(E_Txb_CurrentText.Text)
                     : Coding.DecodeBase64(E_Txb_CurrentText.Text);
-
-            }    
+            }
             else if (E_Combo_Algoritm.SelectedIndex == 1)
             {
-                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                result = E_Combo_EnCodeDe.SelectedIndex == 0
                     ? Coding.URLEncode(E_Txb_CurrentText.Text)
                     : Coding.URLDecode(E_Txb_CurrentText.Text);
             }
             else if (E_Combo_Algoritm.SelectedIndex == 2)
             {
-                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                result = E_Combo_EnCodeDe.SelectedIndex == 0
                     ? Coding.HTMLEncode(E_Txb_CurrentText.Text)
                     : Coding.HTMLDecode(E_Txb_CurrentText.Text);
             }
             else if (E_Combo_Algoritm.SelectedIndex == 3)
             {
-                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                result = E_Combo_EnCodeDe.SelectedIndex == 0
                     ? Coding.UnescapeEncode(E_Txb_CurrentText.Text)
                     : Coding.UnescapeDecode(E_Txb_CurrentText.Text);
             }
 
+            DisplaySuccessResult(E_Txb_ResultText, result);
         }
 
      
@@ -126,90 +119,126 @@ namespace HashNCoder
 
         private bool IsCopyProcessing = false;
 
-        private async Task CopyToClipboardAsync(Guna2Button button,
-                                                Guna2TextBox textBox,
-                                                Image originalIcon,
-                                                Image successIcon)
+        private async Task CopyToClipboardAsync(
+            Guna2Button button,
+            Guna2TextBox textBox,
+            Image originalIcon,
+            Image successIcon)
         {
             if (IsCopyProcessing) return;
-            
-            if (!string.IsNullOrWhiteSpace(textBox.Text))
+
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                DisplayErrorInResult(textBox, "The text field is empty. There is nothing to copy.");
+                await HighlightTextBoxAsync(textBox);
+                return;
+            }
+            try
             {
                 IsCopyProcessing = true;
                 Clipboard.SetText(textBox.Text);
                 button.Image = successIcon;
                 await Task.Delay(1000);
                 button.Image = originalIcon;
-                IsCopyProcessing = false;
-            }
-            else
-            {
-                MessageBox.Show("The result field is empty. There is nothing to copy.", "Warning!");
-            }
-        }
-
-
-        private async void AES_Btn_Encode_Click(object sender, EventArgs e)
-        {
-            bool hasError = false;
-          
-            if (string.IsNullOrWhiteSpace(AES_TxtBx_Key.Text))
-            {
-                await HighlightTextBoxAsync(AES_TxtBx_Key);
-                hasError = true;
-            }
-
-            if (string.IsNullOrWhiteSpace(AES_Txb_CurrentText.Text))
-            {
-                await HighlightTextBoxAsync(AES_Txb_CurrentText);
-                hasError = true;
-            }
-            else if (AES_Combo_EnCodeDe.SelectedIndex == 1) 
-            {
-                if (!Coding.IsBase64String(AES_Txb_CurrentText.Text))
-                {
-                    await HighlightTextBoxAsync(AES_Txb_CurrentText);
-                    MessageBox.Show(
-                               "The string is not a valid Base64 string.\n\n" +
-                               "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
-                               "- Have a length that is a multiple of 4 (including '=' padding characters);",
-                               "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                 
-                }
-            }
-
-            if (hasError)
-            {
-                MessageBox.Show("Please fill in the required fields.", "Warning");
-                return;
-            }
-            try
-            {
-                CipherMode cipherMode = AES_Combo_Algoritm.SelectedIndex == 0 ? CipherMode.ECB : CipherMode.CBC;
-
-                int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
-
-                AES_Txb_ResultText.Text = AES_Combo_EnCodeDe.SelectedIndex == 0
-                    ? Coding.AES_Encrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize)
-                    : Coding.AES_Decrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DisplayErrorInResult(textBox, ex.Message);
+                await HighlightTextBoxAsync(textBox);
+            }
+            finally
+            {
+                IsCopyProcessing = false;
             }
         }
 
-        private void AES_Btn_GenerateKey_Click(object sender, EventArgs e)
-        {
+        private async void AES_Btn_Encode_Click(object sender, EventArgs e)
+        {         
+            try
+            {
+                bool isKeyEmpty = string.IsNullOrWhiteSpace(AES_TxtBx_Key.Text);
+                bool isTextEmpty = string.IsNullOrWhiteSpace(AES_Txb_CurrentText.Text);
 
-            int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
-            byte[] key = Coding.AES_GenerateKey(keySize);
-            AES_TxtBx_Key.Text = Convert.ToBase64String(key);
+                if (isKeyEmpty && isTextEmpty)
+                {
+                    await HighlightTextBoxAsync(AES_TxtBx_Key);
+                    await HighlightTextBoxAsync(AES_Txb_CurrentText);
+                    throw new InvalidOperationException("Both the key and the text fields are empty. Please fill in both fields to proceed.");
+                }
 
+                if (isKeyEmpty)
+                {
+                    await HighlightTextBoxAsync(AES_TxtBx_Key);
+                    throw new InvalidOperationException("The key field is empty. Please provide a key to proceed.");
+                }
 
+                if (isTextEmpty)
+                {
+                    await HighlightTextBoxAsync(AES_Txb_CurrentText);
+                    throw new InvalidOperationException("The text field is empty. Please provide text to encrypt or decrypt.");
+                }
+
+                if (AES_Combo_EnCodeDe.SelectedIndex == 1) 
+                {
+                    if (!Coding.IsBase64String(AES_Txb_CurrentText.Text))
+                    {
+                        await HighlightTextBoxAsync(AES_Txb_CurrentText);
+                        throw new FormatException(
+                            "The string is not a valid Base64 string.\n\n" +
+                            "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
+                            "- Have a length that is a multiple of 4 (including '=' padding characters);");
+                    }
+                }
+
+                CipherMode cipherMode = AES_Combo_Algoritm.SelectedIndex == 0 ? CipherMode.ECB : CipherMode.CBC;
+                int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
+
+                string result = AES_Combo_EnCodeDe.SelectedIndex == 0
+                ? Coding.AES_Encrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize)
+                : Coding.AES_Decrypt(AES_Txb_CurrentText.Text, AES_TxtBx_Key.Text, cipherMode, keySize);
+
+                DisplaySuccessResult(AES_Txb_ResultText, result);
+            }
+            catch (FormatException ex)
+            {
+                DisplayErrorInResult(AES_Txb_ResultText, ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                DisplayErrorInResult(AES_Txb_ResultText, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                DisplayErrorInResult(AES_Txb_ResultText, $"An unexpected error occurred: {ex.Message}");
+            }
         }
 
+        private void DisplayErrorInResult(Guna2TextBox textBox, string errorMessage)
+        {
+            textBox.ForeColor = Color.Red;
+            textBox.Text = errorMessage;
+        }
+        private void DisplaySuccessResult(Guna2TextBox textBox, string result)
+        {
+            textBox.ForeColor = defaultTextColor;
+            textBox.Text = result;
+        }
+
+
+        private void AES_Btn_GenerateKey_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int keySize = int.TryParse(AES_Combo_KeySize.SelectedItem?.ToString(), out int size) ? size : 128;
+                byte[] key = Coding.AES_GenerateKey(keySize);
+                string result = Convert.ToBase64String(key);
+                DisplaySuccessResult(AES_TxtBx_Key, result);
+            }
+            catch (Exception ex)
+            {
+                DisplayErrorInResult(AES_Txb_ResultText, $"Error generating key: {ex.Message}");
+            }
+        }
 
 
         private async Task HighlightTextBoxAsync(Guna2TextBox textBox)
@@ -269,7 +298,6 @@ namespace HashNCoder
             result.AppendLine($"SHA-256:  {Coding.ComputeHash(input, "SHA256")}");
             result.AppendLine($"SHA-384:  {Coding.ComputeHash(input, "SHA384")}");
             result.AppendLine($"SHA-512:  {Coding.ComputeHash(input, "SHA512")}");
-
             
             H_Txb_ResultText.Text = result.ToString();
         }
