@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using Guna.UI2.WinForms;
+using System.Security.Authentication;
 
 
 namespace HashNCoder
@@ -256,6 +257,36 @@ namespace HashNCoder
 
             }
             else AES_Btn_Encode.Text = "Decode";
+        }
+
+        private void H_Btn_GetHashes_Click(object sender, EventArgs e)
+        {
+            var result = new StringBuilder();
+            string input = H_Txb_CurrentText.Text;
+
+            result.AppendLine($"MD5:      {Coding.ComputeHash(input, "MD5")}");
+            result.AppendLine($"SHA-1:    {Coding.ComputeHash(input, "SHA1")}");
+            result.AppendLine($"SHA-256:  {Coding.ComputeHash(input, "SHA256")}");
+            result.AppendLine($"SHA-384:  {Coding.ComputeHash(input, "SHA384")}");
+            result.AppendLine($"SHA-512:  {Coding.ComputeHash(input, "SHA512")}");
+
+            
+            H_Txb_ResultText.Text = result.ToString();
+        }
+
+        private void H_Btn_Paste_Click(object sender, EventArgs e)
+        {
+            H_Txb_CurrentText.Text = Clipboard.GetText();
+        }
+
+        private async void H_Btn_Copy_Click(object sender, EventArgs e)
+        {
+            await CopyToClipboardAsync(
+                 H_Btn_Copy,
+                  H_Txb_ResultText,
+                  Properties.Resources.Copy_icon_30px,
+                  Properties.Resources.Icon_Check_30px
+              );
         }
     }
 }

@@ -195,5 +195,14 @@ namespace HashNCoder
             return System.Text.RegularExpressions.Regex.IsMatch(base64, @"^[a-zA-Z0-9+/]*={0,2}$");
         }
 
+        public static string ComputeHash(string input, string algorithmName)
+        {
+            using (HashAlgorithm algorithm = HashAlgorithm.Create(algorithmName))
+            {               
+                byte[] hashBytes = algorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+                return BitConverter.ToString(hashBytes).Replace("-", "").ToLowerInvariant();
+            }
+        }
+
     }
 }
