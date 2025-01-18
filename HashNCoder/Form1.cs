@@ -24,13 +24,17 @@ namespace HashNCoder
         {
             if (E_Combo_Algoritm.SelectedIndex == 0)
             {
-                if (E_Combo_EnCodeDe.SelectedIndex == 0)
-                {
-                    E_Txb_ResultText.Text = Coding.EncodeBase64(E_Txb_CurrentText.Text);
-                }
-                else E_Txb_ResultText.Text = Coding.DecodeBase64(E_Txb_CurrentText.Text);
+                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                    ? Coding.EncodeBase64(E_Txb_CurrentText.Text)
+                    : Coding.DecodeBase64(E_Txb_CurrentText.Text);
 
             }    
+            else if (E_Combo_Algoritm.SelectedIndex == 1)
+            {
+                E_Txb_ResultText.Text = E_Combo_EnCodeDe.SelectedIndex == 0
+                    ? Coding.URLEncode(E_Txb_CurrentText.Text)
+                    : Coding.URLDecode(E_Txb_CurrentText.Text);
+            }
 
            
         }
