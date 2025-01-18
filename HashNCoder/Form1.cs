@@ -220,8 +220,15 @@ namespace HashNCoder
 
         // ------------------------------------------------------------------ HASH
 
-        private void H_Btn_GetHashes_Click(object sender, EventArgs e)
+        private async void H_Btn_GetHashes_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(H_Txb_CurrentText.Text))
+            {
+                DisplayErrorInResult(H_Txb_ResultText, $"Input text is empty. Please provide text to hash.");
+                await HighlightTextBoxAsync(H_Txb_CurrentText);
+                return;
+            }
+
             var result = new StringBuilder();
             string input = H_Txb_CurrentText.Text;
 
@@ -230,8 +237,9 @@ namespace HashNCoder
             result.AppendLine($"SHA-256:  {Coding.ComputeHash(input, "SHA256")}");
             result.AppendLine($"SHA-384:  {Coding.ComputeHash(input, "SHA384")}");
             result.AppendLine($"SHA-512:  {Coding.ComputeHash(input, "SHA512")}");
-            
-            H_Txb_ResultText.Text = result.ToString();
+
+            DisplaySuccessResult(H_Txb_ResultText, result.ToString());
+          
         }
 
         private void H_Btn_Paste_Click(object sender, EventArgs e)

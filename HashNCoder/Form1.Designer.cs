@@ -108,12 +108,12 @@
             this.H_Btn_Encode.Controls.Add(this.Hashing_Tab);
             this.H_Btn_Encode.ImageList = this.imageList1;
             this.H_Btn_Encode.ItemSize = new System.Drawing.Size(212, 40);
-            this.H_Btn_Encode.Location = new System.Drawing.Point(0, 0);
+            this.H_Btn_Encode.Location = new System.Drawing.Point(-4, 0);
             this.H_Btn_Encode.Margin = new System.Windows.Forms.Padding(0);
             this.H_Btn_Encode.Name = "H_Btn_Encode";
             this.H_Btn_Encode.Padding = new System.Drawing.Point(0, 0);
             this.H_Btn_Encode.SelectedIndex = 0;
-            this.H_Btn_Encode.Size = new System.Drawing.Size(641, 661);
+            this.H_Btn_Encode.Size = new System.Drawing.Size(645, 661);
             this.H_Btn_Encode.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.H_Btn_Encode.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.H_Btn_Encode.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -160,7 +160,7 @@
             this.Encoding_Tab.Location = new System.Drawing.Point(4, 44);
             this.Encoding_Tab.Margin = new System.Windows.Forms.Padding(0);
             this.Encoding_Tab.Name = "Encoding_Tab";
-            this.Encoding_Tab.Size = new System.Drawing.Size(633, 613);
+            this.Encoding_Tab.Size = new System.Drawing.Size(637, 613);
             this.Encoding_Tab.TabIndex = 0;
             this.Encoding_Tab.Text = "Encoding";
             // 
@@ -176,7 +176,7 @@
             this.E_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
             this.E_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
             this.E_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.E_Btn_Copy.Location = new System.Drawing.Point(406, 414);
+            this.E_Btn_Copy.Location = new System.Drawing.Point(411, 414);
             this.E_Btn_Copy.Name = "E_Btn_Copy";
             this.E_Btn_Copy.Size = new System.Drawing.Size(180, 22);
             this.E_Btn_Copy.TabIndex = 17;
@@ -195,7 +195,7 @@
             this.E_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
             this.E_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
             this.E_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.E_Btn_Paste.Location = new System.Drawing.Point(406, 196);
+            this.E_Btn_Paste.Location = new System.Drawing.Point(411, 196);
             this.E_Btn_Paste.Name = "E_Btn_Paste";
             this.E_Btn_Paste.Size = new System.Drawing.Size(180, 22);
             this.E_Btn_Paste.TabIndex = 17;
@@ -213,7 +213,7 @@
             this.E_Btn_Swap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E_Btn_Swap.ForeColor = System.Drawing.Color.White;
             this.E_Btn_Swap.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
-            this.E_Btn_Swap.Location = new System.Drawing.Point(37, 348);
+            this.E_Btn_Swap.Location = new System.Drawing.Point(42, 348);
             this.E_Btn_Swap.Name = "E_Btn_Swap";
             this.E_Btn_Swap.Size = new System.Drawing.Size(40, 40);
             this.E_Btn_Swap.TabIndex = 16;
@@ -229,7 +229,7 @@
             this.E_Btn_Encode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
             this.E_Btn_Encode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E_Btn_Encode.ForeColor = System.Drawing.Color.White;
-            this.E_Btn_Encode.Location = new System.Drawing.Point(200, 340);
+            this.E_Btn_Encode.Location = new System.Drawing.Point(205, 340);
             this.E_Btn_Encode.Name = "E_Btn_Encode";
             this.E_Btn_Encode.Size = new System.Drawing.Size(220, 54);
             this.E_Btn_Encode.TabIndex = 16;
@@ -241,7 +241,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label2.Location = new System.Drawing.Point(37, 159);
+            this.label2.Location = new System.Drawing.Point(42, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 25);
             this.label2.TabIndex = 13;
@@ -253,7 +253,7 @@
             this.label59.BackColor = System.Drawing.Color.Transparent;
             this.label59.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label59.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label59.Location = new System.Drawing.Point(37, 120);
+            this.label59.Location = new System.Drawing.Point(42, 120);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(205, 25);
             this.label59.TabIndex = 13;
@@ -265,7 +265,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label4.Location = new System.Drawing.Point(38, 414);
+            this.label4.Location = new System.Drawing.Point(43, 414);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(548, 20);
             this.label4.TabIndex = 12;
@@ -277,7 +277,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label3.Location = new System.Drawing.Point(38, 196);
+            this.label3.Location = new System.Drawing.Point(43, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(548, 20);
             this.label3.TabIndex = 12;
@@ -289,7 +289,7 @@
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label28.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label28.Location = new System.Drawing.Point(59, 64);
+            this.label28.Location = new System.Drawing.Point(64, 64);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(509, 46);
             this.label28.TabIndex = 12;
@@ -301,7 +301,7 @@
             // guna2Separator3
             // 
             this.guna2Separator3.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator3.Location = new System.Drawing.Point(37, 364);
+            this.guna2Separator3.Location = new System.Drawing.Point(42, 364);
             this.guna2Separator3.Name = "guna2Separator3";
             this.guna2Separator3.Size = new System.Drawing.Size(549, 10);
             this.guna2Separator3.TabIndex = 11;
@@ -309,7 +309,7 @@
             // guna2Separator13
             // 
             this.guna2Separator13.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator13.Location = new System.Drawing.Point(41, 78);
+            this.guna2Separator13.Location = new System.Drawing.Point(46, 78);
             this.guna2Separator13.Name = "guna2Separator13";
             this.guna2Separator13.Size = new System.Drawing.Size(545, 10);
             this.guna2Separator13.TabIndex = 11;
@@ -321,7 +321,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(633, 52);
+            this.guna2Panel1.Size = new System.Drawing.Size(637, 52);
             this.guna2Panel1.TabIndex = 3;
             // 
             // label1
@@ -332,7 +332,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(633, 52);
+            this.label1.Size = new System.Drawing.Size(637, 52);
             this.label1.TabIndex = 2;
             this.label1.Text = "Encoding";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -352,7 +352,7 @@
             this.E_Txb_ResultText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.E_Txb_ResultText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E_Txb_ResultText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.E_Txb_ResultText.Location = new System.Drawing.Point(37, 437);
+            this.E_Txb_ResultText.Location = new System.Drawing.Point(42, 437);
             this.E_Txb_ResultText.Multiline = true;
             this.E_Txb_ResultText.Name = "E_Txb_ResultText";
             this.E_Txb_ResultText.PasswordChar = '\0';
@@ -378,7 +378,7 @@
             this.E_Txb_CurrentText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.E_Txb_CurrentText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.E_Txb_CurrentText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.E_Txb_CurrentText.Location = new System.Drawing.Point(37, 219);
+            this.E_Txb_CurrentText.Location = new System.Drawing.Point(42, 219);
             this.E_Txb_CurrentText.Multiline = true;
             this.E_Txb_CurrentText.Name = "E_Txb_CurrentText";
             this.E_Txb_CurrentText.PasswordChar = '\0';
@@ -402,7 +402,7 @@
             this.E_Combo_EnCodeDe.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.E_Combo_EnCodeDe.Location = new System.Drawing.Point(427, 155);
+            this.E_Combo_EnCodeDe.Location = new System.Drawing.Point(432, 155);
             this.E_Combo_EnCodeDe.Name = "E_Combo_EnCodeDe";
             this.E_Combo_EnCodeDe.Size = new System.Drawing.Size(159, 36);
             this.E_Combo_EnCodeDe.StartIndex = 0;
@@ -425,7 +425,7 @@
             "UrlEncode",
             "HtmlEncode",
             "Unescape Encode"});
-            this.E_Combo_Algoritm.Location = new System.Drawing.Point(427, 113);
+            this.E_Combo_Algoritm.Location = new System.Drawing.Point(432, 113);
             this.E_Combo_Algoritm.Name = "E_Combo_Algoritm";
             this.E_Combo_Algoritm.Size = new System.Drawing.Size(159, 36);
             this.E_Combo_Algoritm.StartIndex = 0;
@@ -434,7 +434,7 @@
             // guna2Separator2
             // 
             this.guna2Separator2.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator2.Location = new System.Drawing.Point(37, 166);
+            this.guna2Separator2.Location = new System.Drawing.Point(42, 166);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator2.TabIndex = 11;
@@ -442,7 +442,7 @@
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator1.Location = new System.Drawing.Point(37, 127);
+            this.guna2Separator1.Location = new System.Drawing.Point(42, 127);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator1.TabIndex = 11;
@@ -479,7 +479,7 @@
             this.AES_Tab.Location = new System.Drawing.Point(4, 44);
             this.AES_Tab.Margin = new System.Windows.Forms.Padding(0);
             this.AES_Tab.Name = "AES_Tab";
-            this.AES_Tab.Size = new System.Drawing.Size(633, 613);
+            this.AES_Tab.Size = new System.Drawing.Size(637, 613);
             this.AES_Tab.TabIndex = 1;
             this.AES_Tab.Text = "AES";
             // 
@@ -494,7 +494,7 @@
             this.AES_Btn_Swap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_Btn_Swap.ForeColor = System.Drawing.Color.White;
             this.AES_Btn_Swap.Image = global::HashNCoder.Properties.Resources.Icon_swap_30px;
-            this.AES_Btn_Swap.Location = new System.Drawing.Point(37, 412);
+            this.AES_Btn_Swap.Location = new System.Drawing.Point(42, 412);
             this.AES_Btn_Swap.Name = "AES_Btn_Swap";
             this.AES_Btn_Swap.Size = new System.Drawing.Size(40, 40);
             this.AES_Btn_Swap.TabIndex = 32;
@@ -512,7 +512,7 @@
             this.AES_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
             this.AES_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
             this.AES_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.AES_Btn_Copy.Location = new System.Drawing.Point(406, 469);
+            this.AES_Btn_Copy.Location = new System.Drawing.Point(411, 469);
             this.AES_Btn_Copy.Name = "AES_Btn_Copy";
             this.AES_Btn_Copy.Size = new System.Drawing.Size(180, 22);
             this.AES_Btn_Copy.TabIndex = 31;
@@ -531,7 +531,7 @@
             this.AES_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
             this.AES_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
             this.AES_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.AES_Btn_Paste.Location = new System.Drawing.Point(406, 266);
+            this.AES_Btn_Paste.Location = new System.Drawing.Point(411, 266);
             this.AES_Btn_Paste.Name = "AES_Btn_Paste";
             this.AES_Btn_Paste.Size = new System.Drawing.Size(180, 22);
             this.AES_Btn_Paste.TabIndex = 30;
@@ -543,7 +543,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label12.Location = new System.Drawing.Point(65, 61);
+            this.label12.Location = new System.Drawing.Point(70, 61);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(495, 29);
             this.label12.TabIndex = 29;
@@ -554,7 +554,7 @@
             // guna2Separator9
             // 
             this.guna2Separator9.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator9.Location = new System.Drawing.Point(41, 67);
+            this.guna2Separator9.Location = new System.Drawing.Point(46, 67);
             this.guna2Separator9.Name = "guna2Separator9";
             this.guna2Separator9.Size = new System.Drawing.Size(545, 10);
             this.guna2Separator9.TabIndex = 28;
@@ -569,7 +569,7 @@
             this.AES_Btn_Encode.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
             this.AES_Btn_Encode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_Btn_Encode.ForeColor = System.Drawing.Color.White;
-            this.AES_Btn_Encode.Location = new System.Drawing.Point(200, 405);
+            this.AES_Btn_Encode.Location = new System.Drawing.Point(205, 405);
             this.AES_Btn_Encode.Name = "AES_Btn_Encode";
             this.AES_Btn_Encode.Size = new System.Drawing.Size(220, 54);
             this.AES_Btn_Encode.TabIndex = 27;
@@ -579,7 +579,7 @@
             // guna2Separator8
             // 
             this.guna2Separator8.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator8.Location = new System.Drawing.Point(37, 428);
+            this.guna2Separator8.Location = new System.Drawing.Point(42, 428);
             this.guna2Separator8.Name = "guna2Separator8";
             this.guna2Separator8.Size = new System.Drawing.Size(549, 10);
             this.guna2Separator8.TabIndex = 26;
@@ -589,7 +589,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label10.Location = new System.Drawing.Point(38, 469);
+            this.label10.Location = new System.Drawing.Point(43, 469);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(548, 20);
             this.label10.TabIndex = 22;
@@ -601,7 +601,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label11.Location = new System.Drawing.Point(38, 266);
+            this.label11.Location = new System.Drawing.Point(43, 266);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(548, 20);
             this.label11.TabIndex = 23;
@@ -623,7 +623,7 @@
             this.AES_Txb_ResultText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AES_Txb_ResultText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_Txb_ResultText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AES_Txb_ResultText.Location = new System.Drawing.Point(37, 492);
+            this.AES_Txb_ResultText.Location = new System.Drawing.Point(42, 492);
             this.AES_Txb_ResultText.Multiline = true;
             this.AES_Txb_ResultText.Name = "AES_Txb_ResultText";
             this.AES_Txb_ResultText.PasswordChar = '\0';
@@ -649,7 +649,7 @@
             this.AES_Txb_CurrentText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AES_Txb_CurrentText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_Txb_CurrentText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AES_Txb_CurrentText.Location = new System.Drawing.Point(37, 289);
+            this.AES_Txb_CurrentText.Location = new System.Drawing.Point(42, 289);
             this.AES_Txb_CurrentText.Multiline = true;
             this.AES_Txb_CurrentText.Name = "AES_Txb_CurrentText";
             this.AES_Txb_CurrentText.PasswordChar = '\0';
@@ -669,7 +669,7 @@
             this.AES_Btn_GenerateKey.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
             this.AES_Btn_GenerateKey.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_Btn_GenerateKey.ForeColor = System.Drawing.Color.White;
-            this.AES_Btn_GenerateKey.Location = new System.Drawing.Point(132, 224);
+            this.AES_Btn_GenerateKey.Location = new System.Drawing.Point(137, 224);
             this.AES_Btn_GenerateKey.Name = "AES_Btn_GenerateKey";
             this.AES_Btn_GenerateKey.Size = new System.Drawing.Size(112, 35);
             this.AES_Btn_GenerateKey.TabIndex = 19;
@@ -688,7 +688,7 @@
             this.AES_TxtBx_Key.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.AES_TxtBx_Key.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AES_TxtBx_Key.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.AES_TxtBx_Key.Location = new System.Drawing.Point(250, 224);
+            this.AES_TxtBx_Key.Location = new System.Drawing.Point(255, 224);
             this.AES_TxtBx_Key.Name = "AES_TxtBx_Key";
             this.AES_TxtBx_Key.PasswordChar = '\0';
             this.AES_TxtBx_Key.PlaceholderText = "Type key here...";
@@ -703,7 +703,7 @@
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(633, 52);
+            this.guna2Panel2.Size = new System.Drawing.Size(637, 52);
             this.guna2Panel2.TabIndex = 17;
             // 
             // label6
@@ -714,7 +714,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(633, 52);
+            this.label6.Size = new System.Drawing.Size(637, 52);
             this.label6.TabIndex = 2;
             this.label6.Text = "AES";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -724,7 +724,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label9.Location = new System.Drawing.Point(37, 228);
+            this.label9.Location = new System.Drawing.Point(42, 228);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 25);
             this.label9.TabIndex = 16;
@@ -736,7 +736,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label8.Location = new System.Drawing.Point(37, 186);
+            this.label8.Location = new System.Drawing.Point(42, 186);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 25);
             this.label8.TabIndex = 16;
@@ -748,7 +748,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label7.Location = new System.Drawing.Point(37, 143);
+            this.label7.Location = new System.Drawing.Point(42, 143);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 25);
             this.label7.TabIndex = 16;
@@ -770,7 +770,7 @@
             "128",
             "192",
             "256"});
-            this.AES_Combo_KeySize.Location = new System.Drawing.Point(446, 182);
+            this.AES_Combo_KeySize.Location = new System.Drawing.Point(451, 182);
             this.AES_Combo_KeySize.Name = "AES_Combo_KeySize";
             this.AES_Combo_KeySize.Size = new System.Drawing.Size(140, 36);
             this.AES_Combo_KeySize.StartIndex = 0;
@@ -779,7 +779,7 @@
             // guna2Separator7
             // 
             this.guna2Separator7.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator7.Location = new System.Drawing.Point(68, 235);
+            this.guna2Separator7.Location = new System.Drawing.Point(73, 235);
             this.guna2Separator7.Name = "guna2Separator7";
             this.guna2Separator7.Size = new System.Drawing.Size(176, 10);
             this.guna2Separator7.TabIndex = 15;
@@ -789,7 +789,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("BigNoodleTooOblique", 16F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label5.Location = new System.Drawing.Point(37, 101);
+            this.label5.Location = new System.Drawing.Point(42, 101);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(171, 25);
             this.label5.TabIndex = 16;
@@ -799,7 +799,7 @@
             // guna2Separator6
             // 
             this.guna2Separator6.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator6.Location = new System.Drawing.Point(37, 193);
+            this.guna2Separator6.Location = new System.Drawing.Point(42, 193);
             this.guna2Separator6.Name = "guna2Separator6";
             this.guna2Separator6.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator6.TabIndex = 15;
@@ -818,7 +818,7 @@
             this.AES_Combo_Algoritm.Items.AddRange(new object[] {
             "AES-ECB",
             "AES-CBC"});
-            this.AES_Combo_Algoritm.Location = new System.Drawing.Point(446, 139);
+            this.AES_Combo_Algoritm.Location = new System.Drawing.Point(451, 139);
             this.AES_Combo_Algoritm.Name = "AES_Combo_Algoritm";
             this.AES_Combo_Algoritm.Size = new System.Drawing.Size(140, 36);
             this.AES_Combo_Algoritm.StartIndex = 0;
@@ -827,7 +827,7 @@
             // guna2Separator5
             // 
             this.guna2Separator5.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator5.Location = new System.Drawing.Point(37, 150);
+            this.guna2Separator5.Location = new System.Drawing.Point(42, 150);
             this.guna2Separator5.Name = "guna2Separator5";
             this.guna2Separator5.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator5.TabIndex = 15;
@@ -846,7 +846,7 @@
             this.AES_Combo_EnCodeDe.Items.AddRange(new object[] {
             "Encode",
             "Decode"});
-            this.AES_Combo_EnCodeDe.Location = new System.Drawing.Point(446, 97);
+            this.AES_Combo_EnCodeDe.Location = new System.Drawing.Point(451, 97);
             this.AES_Combo_EnCodeDe.Name = "AES_Combo_EnCodeDe";
             this.AES_Combo_EnCodeDe.Size = new System.Drawing.Size(140, 36);
             this.AES_Combo_EnCodeDe.StartIndex = 0;
@@ -856,7 +856,7 @@
             // guna2Separator4
             // 
             this.guna2Separator4.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator4.Location = new System.Drawing.Point(37, 108);
+            this.guna2Separator4.Location = new System.Drawing.Point(42, 108);
             this.guna2Separator4.Name = "guna2Separator4";
             this.guna2Separator4.Size = new System.Drawing.Size(532, 10);
             this.guna2Separator4.TabIndex = 15;
@@ -879,7 +879,7 @@
             this.Hashing_Tab.Location = new System.Drawing.Point(4, 44);
             this.Hashing_Tab.Margin = new System.Windows.Forms.Padding(0);
             this.Hashing_Tab.Name = "Hashing_Tab";
-            this.Hashing_Tab.Size = new System.Drawing.Size(633, 613);
+            this.Hashing_Tab.Size = new System.Drawing.Size(637, 613);
             this.Hashing_Tab.TabIndex = 2;
             this.Hashing_Tab.Text = "Hashing";
             // 
@@ -895,7 +895,7 @@
             this.H_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
             this.H_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
             this.H_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.H_Btn_Copy.Location = new System.Drawing.Point(406, 413);
+            this.H_Btn_Copy.Location = new System.Drawing.Point(411, 413);
             this.H_Btn_Copy.Name = "H_Btn_Copy";
             this.H_Btn_Copy.Size = new System.Drawing.Size(180, 22);
             this.H_Btn_Copy.TabIndex = 32;
@@ -914,7 +914,7 @@
             this.H_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
             this.H_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
             this.H_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.H_Btn_Paste.Location = new System.Drawing.Point(406, 118);
+            this.H_Btn_Paste.Location = new System.Drawing.Point(411, 118);
             this.H_Btn_Paste.Name = "H_Btn_Paste";
             this.H_Btn_Paste.Size = new System.Drawing.Size(180, 22);
             this.H_Btn_Paste.TabIndex = 31;
@@ -931,7 +931,7 @@
             this.H_Btn_GetHashes.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(188)))), ((int)(((byte)(105)))));
             this.H_Btn_GetHashes.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H_Btn_GetHashes.ForeColor = System.Drawing.Color.White;
-            this.H_Btn_GetHashes.Location = new System.Drawing.Point(200, 319);
+            this.H_Btn_GetHashes.Location = new System.Drawing.Point(205, 319);
             this.H_Btn_GetHashes.Name = "H_Btn_GetHashes";
             this.H_Btn_GetHashes.Size = new System.Drawing.Size(220, 54);
             this.H_Btn_GetHashes.TabIndex = 28;
@@ -941,7 +941,7 @@
             // guna2Separator11
             // 
             this.guna2Separator11.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator11.Location = new System.Drawing.Point(37, 342);
+            this.guna2Separator11.Location = new System.Drawing.Point(42, 342);
             this.guna2Separator11.Name = "guna2Separator11";
             this.guna2Separator11.Size = new System.Drawing.Size(549, 10);
             this.guna2Separator11.TabIndex = 27;
@@ -951,7 +951,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label15.Location = new System.Drawing.Point(59, 64);
+            this.label15.Location = new System.Drawing.Point(64, 64);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(509, 46);
             this.label15.TabIndex = 26;
@@ -962,7 +962,7 @@
             // guna2Separator10
             // 
             this.guna2Separator10.FillColor = System.Drawing.Color.SlateGray;
-            this.guna2Separator10.Location = new System.Drawing.Point(41, 78);
+            this.guna2Separator10.Location = new System.Drawing.Point(46, 78);
             this.guna2Separator10.Name = "guna2Separator10";
             this.guna2Separator10.Size = new System.Drawing.Size(545, 10);
             this.guna2Separator10.TabIndex = 25;
@@ -974,7 +974,7 @@
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(52)))), ((int)(((byte)(67)))));
             this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(633, 52);
+            this.guna2Panel3.Size = new System.Drawing.Size(637, 52);
             this.guna2Panel3.TabIndex = 24;
             // 
             // label16
@@ -985,7 +985,7 @@
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label16.Location = new System.Drawing.Point(0, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(633, 52);
+            this.label16.Size = new System.Drawing.Size(637, 52);
             this.label16.TabIndex = 2;
             this.label16.Text = "Hashing";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -995,7 +995,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label13.Location = new System.Drawing.Point(38, 414);
+            this.label13.Location = new System.Drawing.Point(43, 414);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(548, 20);
             this.label13.TabIndex = 20;
@@ -1007,7 +1007,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label14.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.label14.Location = new System.Drawing.Point(38, 119);
+            this.label14.Location = new System.Drawing.Point(43, 119);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(548, 20);
             this.label14.TabIndex = 21;
@@ -1029,7 +1029,7 @@
             this.H_Txb_ResultText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.H_Txb_ResultText.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.H_Txb_ResultText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.H_Txb_ResultText.Location = new System.Drawing.Point(37, 437);
+            this.H_Txb_ResultText.Location = new System.Drawing.Point(42, 437);
             this.H_Txb_ResultText.Multiline = true;
             this.H_Txb_ResultText.Name = "H_Txb_ResultText";
             this.H_Txb_ResultText.PasswordChar = '\0';
@@ -1055,7 +1055,7 @@
             this.H_Txb_CurrentText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.H_Txb_CurrentText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.H_Txb_CurrentText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.H_Txb_CurrentText.Location = new System.Drawing.Point(37, 142);
+            this.H_Txb_CurrentText.Location = new System.Drawing.Point(42, 142);
             this.H_Txb_CurrentText.Multiline = true;
             this.H_Txb_CurrentText.Name = "H_Txb_CurrentText";
             this.H_Txb_CurrentText.PasswordChar = '\0';
