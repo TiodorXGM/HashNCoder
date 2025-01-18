@@ -1077,6 +1077,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(633, 661);
             this.Controls.Add(this.H_Btn_Encode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1084,6 +1085,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Hash\'n\'Coder";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.H_Btn_Encode.ResumeLayout(false);
             this.Encoding_Tab.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);

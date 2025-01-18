@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using Guna.UI2.WinForms;
 using System.Security.Authentication;
+using System.Reflection;
 
 
 namespace HashNCoder
@@ -21,7 +22,9 @@ namespace HashNCoder
         private Color defaultTextColor = Color.FromArgb(125, 137, 149);
         public Form1()
         {
-            InitializeComponent();       
+            InitializeComponent();
+
+          
         }
        
         // ------------------------------------------------------------------ ENCODING
@@ -326,6 +329,17 @@ namespace HashNCoder
             }
         }
 
-      
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+            string version = Application.ProductVersion;
+            this.Text += $" v.{version}";
+
+        }
     }
 }
