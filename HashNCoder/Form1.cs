@@ -18,13 +18,13 @@ namespace HashNCoder
     
     public partial class Form1 : Form
     {
+        private Color defaultTextColor = Color.FromArgb(125, 137, 149);
         public Form1()
         {
             InitializeComponent();       
         }
-
-        private Color defaultTextColor = Color.FromArgb(125, 137, 149);
-
+       
+        // ------------------------------------------------------------------ ENCODING
         private async void E_Btn_Encode_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(E_Txb_CurrentText.Text))
@@ -76,7 +76,6 @@ namespace HashNCoder
 
             DisplaySuccessResult(E_Txb_ResultText, result);
         }
-
      
         private void E_Combo_EnCodeDe_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -93,8 +92,6 @@ namespace HashNCoder
             E_Txb_CurrentText.Text = Clipboard.GetText();
            
         }
-
-        private bool EBtnCopyIsProcessing = false; 
         private async void E_Btn_Copy_ClickAsync(object sender, EventArgs e)
         {
             await CopyToClipboardAsync(
@@ -110,48 +107,8 @@ namespace HashNCoder
             SwapText(E_Txb_ResultText, E_Txb_CurrentText);
         }
 
-        private void SwapText(Guna2TextBox textBox1, Guna2TextBox textBox2)
-        {
-            string temp = textBox1.Text;
-            textBox1.Text = textBox2.Text;
-            textBox2.Text = temp;
-        }
-
-        private bool IsCopyProcessing = false;
-
-        private async Task CopyToClipboardAsync(
-            Guna2Button button,
-            Guna2TextBox textBox,
-            Image originalIcon,
-            Image successIcon)
-        {
-            if (IsCopyProcessing) return;
-
-            if (string.IsNullOrWhiteSpace(textBox.Text))
-            {
-                DisplayErrorInResult(textBox, "The text field is empty. There is nothing to copy.");
-                await HighlightTextBoxAsync(textBox);
-                return;
-            }
-            try
-            {
-                IsCopyProcessing = true;
-                Clipboard.SetText(textBox.Text);
-                button.Image = successIcon;
-                await Task.Delay(1000);
-                button.Image = originalIcon;
-            }
-            catch (Exception ex)
-            {
-                DisplayErrorInResult(textBox, ex.Message);
-                await HighlightTextBoxAsync(textBox);
-            }
-            finally
-            {
-                IsCopyProcessing = false;
-            }
-        }
-
+        
+        // ------------------------------------------------------------------ AES
         private async void AES_Btn_Encode_Click(object sender, EventArgs e)
         {         
             try
@@ -213,16 +170,6 @@ namespace HashNCoder
             }
         }
 
-        private void DisplayErrorInResult(Guna2TextBox textBox, string errorMessage)
-        {
-            textBox.ForeColor = Color.Red;
-            textBox.Text = errorMessage;
-        }
-        private void DisplaySuccessResult(Guna2TextBox textBox, string result)
-        {
-            textBox.ForeColor = defaultTextColor;
-            textBox.Text = result;
-        }
 
 
         private void AES_Btn_GenerateKey_Click(object sender, EventArgs e)
@@ -240,23 +187,6 @@ namespace HashNCoder
             }
         }
 
-
-        private async Task HighlightTextBoxAsync(Guna2TextBox textBox)
-        {
-
-            var originalFillColor = textBox.FillColor;
-
-            for (int i = 0; i < 1; i++)
-            {
-                textBox.FillColor = Color.Red;
-                await Task.Delay(200);
-
-                textBox.FillColor = originalFillColor; 
-                await Task.Delay(200);
-            }
-
-
-        }
 
         private void AES_Btn_Paste_Click(object sender, EventArgs e)
         {
@@ -288,6 +218,8 @@ namespace HashNCoder
             else AES_Btn_Encode.Text = "Decode";
         }
 
+        // ------------------------------------------------------------------ HASH
+
         private void H_Btn_GetHashes_Click(object sender, EventArgs e)
         {
             var result = new StringBuilder();
@@ -316,5 +248,76 @@ namespace HashNCoder
                   Properties.Resources.Icon_Check_30px
               );
         }
+
+        // ------------------------------------------------------------------ HELPERS
+
+        private void DisplayErrorInResult(Guna2TextBox textBox, string errorMessage)
+        {
+            textBox.ForeColor = Color.Red;
+            textBox.Text = errorMessage;
+        }
+        private void DisplaySuccessResult(Guna2TextBox textBox, string result)
+        {
+            textBox.ForeColor = defaultTextColor;
+            textBox.Text = result;
+        }
+
+        private void SwapText(Guna2TextBox textBox1, Guna2TextBox textBox2)
+        {
+            string temp = textBox1.Text;
+            textBox1.Text = textBox2.Text;
+            textBox2.Text = temp;
+        }
+
+        private bool IsCopyProcessing = false;
+
+        private async Task CopyToClipboardAsync(
+            Guna2Button button,
+            Guna2TextBox textBox,
+            Image originalIcon,
+            Image successIcon)
+        {
+            if (IsCopyProcessing) return;
+
+            if (string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                DisplayErrorInResult(textBox, "The text field is empty. There is nothing to copy.");
+                await HighlightTextBoxAsync(textBox);
+                return;
+            }
+            try
+            {
+                IsCopyProcessing = true;
+                Clipboard.SetText(textBox.Text);
+                button.Image = successIcon;
+                await Task.Delay(1000);
+                button.Image = originalIcon;
+            }
+            catch (Exception ex)
+            {
+                DisplayErrorInResult(textBox, ex.Message);
+                await HighlightTextBoxAsync(textBox);
+            }
+            finally
+            {
+                IsCopyProcessing = false;
+            }
+        }
+
+        private async Task HighlightTextBoxAsync(Guna2TextBox textBox)
+        {
+            var originalFillColor = textBox.FillColor;
+
+            for (int i = 0; i < 1; i++)
+            {
+                textBox.FillColor = Color.Red;
+                await Task.Delay(200);
+
+                textBox.FillColor = originalFillColor;
+                await Task.Delay(200);
+            }
+        }
+
+      
     }
 }

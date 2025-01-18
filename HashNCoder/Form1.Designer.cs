@@ -79,6 +79,8 @@
             this.AES_Combo_EnCodeDe = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.Hashing_Tab = new System.Windows.Forms.TabPage();
+            this.H_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
+            this.H_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
             this.H_Btn_GetHashes = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Separator11 = new Guna.UI2.WinForms.Guna2Separator();
             this.label15 = new System.Windows.Forms.Label();
@@ -90,8 +92,6 @@
             this.H_Txb_ResultText = new Guna.UI2.WinForms.Guna2TextBox();
             this.H_Txb_CurrentText = new Guna.UI2.WinForms.Guna2TextBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.H_Btn_Paste = new Guna.UI2.WinForms.Guna2Button();
-            this.H_Btn_Copy = new Guna.UI2.WinForms.Guna2Button();
             this.H_Btn_Encode.SuspendLayout();
             this.Encoding_Tab.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -423,7 +423,7 @@
             this.E_Combo_Algoritm.Items.AddRange(new object[] {
             "Base64",
             "UrlEncode",
-            "HrmlEncode",
+            "HtmlEncode",
             "Unescape Encode"});
             this.E_Combo_Algoritm.Location = new System.Drawing.Point(427, 113);
             this.E_Combo_Algoritm.Name = "E_Combo_Algoritm";
@@ -883,6 +883,44 @@
             this.Hashing_Tab.TabIndex = 2;
             this.Hashing_Tab.Text = "Hashing";
             // 
+            // H_Btn_Copy
+            // 
+            this.H_Btn_Copy.BorderRadius = 5;
+            this.H_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.H_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.H_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.H_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.H_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.H_Btn_Copy.ForeColor = System.Drawing.Color.White;
+            this.H_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
+            this.H_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.H_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
+            this.H_Btn_Copy.Location = new System.Drawing.Point(406, 413);
+            this.H_Btn_Copy.Name = "H_Btn_Copy";
+            this.H_Btn_Copy.Size = new System.Drawing.Size(180, 22);
+            this.H_Btn_Copy.TabIndex = 32;
+            this.H_Btn_Copy.Text = "Copy to Clipboard";
+            this.H_Btn_Copy.Click += new System.EventHandler(this.H_Btn_Copy_Click);
+            // 
+            // H_Btn_Paste
+            // 
+            this.H_Btn_Paste.BorderRadius = 5;
+            this.H_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.H_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.H_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.H_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.H_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.H_Btn_Paste.ForeColor = System.Drawing.Color.White;
+            this.H_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
+            this.H_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.H_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
+            this.H_Btn_Paste.Location = new System.Drawing.Point(406, 118);
+            this.H_Btn_Paste.Name = "H_Btn_Paste";
+            this.H_Btn_Paste.Size = new System.Drawing.Size(180, 22);
+            this.H_Btn_Paste.TabIndex = 31;
+            this.H_Btn_Paste.Text = "Paste from Clipboard";
+            this.H_Btn_Paste.Click += new System.EventHandler(this.H_Btn_Paste_Click);
+            // 
             // H_Btn_GetHashes
             // 
             this.H_Btn_GetHashes.BorderRadius = 15;
@@ -1034,44 +1072,6 @@
             this.imageList1.Images.SetKeyName(0, "Icon_hash_30px.png");
             this.imageList1.Images.SetKeyName(1, "Icon_encoding_30px.png");
             this.imageList1.Images.SetKeyName(2, "Icon_AES_30px.png");
-            // 
-            // H_Btn_Paste
-            // 
-            this.H_Btn_Paste.BorderRadius = 5;
-            this.H_Btn_Paste.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.H_Btn_Paste.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.H_Btn_Paste.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.H_Btn_Paste.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.H_Btn_Paste.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.H_Btn_Paste.ForeColor = System.Drawing.Color.White;
-            this.H_Btn_Paste.Image = global::HashNCoder.Properties.Resources.Paste_icon_30px;
-            this.H_Btn_Paste.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.H_Btn_Paste.ImageSize = new System.Drawing.Size(16, 16);
-            this.H_Btn_Paste.Location = new System.Drawing.Point(406, 118);
-            this.H_Btn_Paste.Name = "H_Btn_Paste";
-            this.H_Btn_Paste.Size = new System.Drawing.Size(180, 22);
-            this.H_Btn_Paste.TabIndex = 31;
-            this.H_Btn_Paste.Text = "Paste from Clipboard";
-            this.H_Btn_Paste.Click += new System.EventHandler(this.H_Btn_Paste_Click);
-            // 
-            // H_Btn_Copy
-            // 
-            this.H_Btn_Copy.BorderRadius = 5;
-            this.H_Btn_Copy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.H_Btn_Copy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.H_Btn_Copy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.H_Btn_Copy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.H_Btn_Copy.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.H_Btn_Copy.ForeColor = System.Drawing.Color.White;
-            this.H_Btn_Copy.Image = global::HashNCoder.Properties.Resources.Copy_icon_30px;
-            this.H_Btn_Copy.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.H_Btn_Copy.ImageSize = new System.Drawing.Size(16, 16);
-            this.H_Btn_Copy.Location = new System.Drawing.Point(406, 413);
-            this.H_Btn_Copy.Name = "H_Btn_Copy";
-            this.H_Btn_Copy.Size = new System.Drawing.Size(180, 22);
-            this.H_Btn_Copy.TabIndex = 32;
-            this.H_Btn_Copy.Text = "Copy to Clipboard";
-            this.H_Btn_Copy.Click += new System.EventHandler(this.H_Btn_Copy_Click);
             // 
             // Form1
             // 

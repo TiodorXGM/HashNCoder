@@ -13,7 +13,7 @@ namespace HashNCoder
 {
     public static class Coding
     {
-
+        // ------------------------------------------------------------------ ENCODING
         public static string EncodeBase64(string input)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(input);
@@ -21,21 +21,9 @@ namespace HashNCoder
         }
 
         public static string DecodeBase64(string input)
-        {
-            try
-            {
-                byte[] bytes = Convert.FromBase64String(input);
-                return Encoding.UTF8.GetString(bytes);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show(
-                                "The string is not a valid Base64 string.\n\n" +
-                                "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
-                                "- Have a length that is a multiple of 4 (including '=' padding characters);",
-                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return null;
-            }
+        {            
+            byte[] bytes = Convert.FromBase64String(input);
+            return Encoding.UTF8.GetString(bytes);         
         }
 
         public static string URLEncode(string input)
@@ -73,6 +61,8 @@ namespace HashNCoder
             string decoded = Uri.UnescapeDataString(input);
             return decoded;
         }
+
+        // ------------------------------------------------------------------ AES
 
         public static string AES_Encrypt(string plainText, string keyText, CipherMode mode, int keySize)
         {          
@@ -114,22 +104,8 @@ namespace HashNCoder
         public static string AES_Decrypt(string cipherText, string keyText, CipherMode mode, int keySize)
         {
             byte[] cipherBytes = null;
-
-            try
-            {
-                cipherBytes = Convert.FromBase64String(cipherText);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show(
-                                "The string is not a valid Base64 string.\n\n" +
-                                "- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';\n" +
-                                "- Have a length that is a multiple of 4 (including '=' padding characters);",
-                                "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return null;
-            }
-
-            byte[] key = GenerateKeyFromText(keyText, keySize); 
+            byte[] key = GenerateKeyFromText(keyText, keySize);        
+            cipherBytes = Convert.FromBase64String(cipherText);          
 
             using (Aes aes = Aes.Create())
             {
@@ -195,6 +171,7 @@ namespace HashNCoder
             return System.Text.RegularExpressions.Regex.IsMatch(base64, @"^[a-zA-Z0-9+/]*={0,2}$");
         }
 
+        // ------------------------------------------------------------------ HASH
         public static string ComputeHash(string input, string algorithmName)
         {
             using (HashAlgorithm algorithm = HashAlgorithm.Create(algorithmName))
