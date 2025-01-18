@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Drawing.Imaging;
+using System.Windows.Forms;
 
 namespace HashNCoder
 {
@@ -19,47 +20,32 @@ namespace HashNCoder
 
         public static string DecodeBase64(string input)
         {
-            byte[] bytes = Convert.FromBase64String(input);
-            return Encoding.UTF8.GetString(bytes);
+            try
+            {
+                byte[] bytes = Convert.FromBase64String(input);
+                return Encoding.UTF8.GetString(bytes);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("The string is not a valid Base64 string. A valid Base64 string should:" +
+                                 "\n- Contain only letters (A-Z, a-z), digits (0-9), and the characters '+' and '/';" +
+                                 "\n- Have a length that is a multiple of 4 (including '=' padding characters);", "Warning!");
+                return null;
+            }
         }
 
         public static string URLEncode(string input)
         {
 
             string encoded = WebUtility.UrlEncode(input);
-            return encoded;
-            //StringBuilder encoded = new StringBuilder();
-
-            //foreach (char c in input)
-            //{
-            //    if (IsSafe(c))
-            //    {
-            //        encoded.Append(c); 
-            //    }
-            //    else if (c == ' ')
-            //    {
-            //        encoded.Append("%20"); 
-            //    }
-            //    else
-            //    {
-            //        encoded.AppendFormat("%{0:X2}", (int)c); 
-            //    }
-            //}
-
-            //return encoded.ToString();
+            return encoded;         
         }
 
         public static string URLDecode(string input)
         {
             string decoded = WebUtility.UrlDecode(input);
-            return decoded;
-            //return Uri.UnescapeDataString(input);
-        }
-
-        //private static bool IsSafe(char c)
-        //{            
-        //    return char.IsLetterOrDigit(c) || c == '-' || c == '_' || c == '.' || c == '~';
-        //}
+            return decoded;            
+        }       
 
         public static string HTMLEncode(string input)
         {            

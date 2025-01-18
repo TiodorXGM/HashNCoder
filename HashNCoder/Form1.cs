@@ -50,7 +50,6 @@ namespace HashNCoder
                     : Coding.UnescapeDecode(E_Txb_CurrentText.Text);
             }
 
-
         }
 
      
@@ -77,6 +76,13 @@ namespace HashNCoder
                 Clipboard.SetText(E_Txb_ResultText.Text);
             }
           
+        }
+
+        private void E_Btn_Swap_Click(object sender, EventArgs e)
+        {
+            string temp = E_Txb_ResultText.Text;
+            E_Txb_ResultText.Text = E_Txb_CurrentText.Text;
+            E_Txb_CurrentText.Text = temp;
         }
     }
 }

@@ -97,5 +97,8 @@
   <ItemGroup>
     <None Include="Resources\Paste_icon_30px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon_swap_30px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
